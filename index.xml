@@ -5,7 +5,7 @@
     <link>https://xy-guo.github.io/</link>
       <atom:link href="https://xy-guo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Xiaoyang Guo @ CUHK</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://xy-guo.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Xiaoyang Guo @ CUHK</title>
@@ -15,7 +15,7 @@
     <item>
       <title>LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector</title>
       <link>https://xy-guo.github.io/publication/liga-iccv21/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://xy-guo.github.io/publication/liga-iccv21/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -31,6 +31,83 @@
 &lt;/div&gt;
  --&gt;
 &lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector</title>
+      <link>https://xy-guo.github.io/liga/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://xy-guo.github.io/liga/</guid>
+      <description>&lt;style&gt;
+.article-container {
+  max-width: 60%;
+  padding: 0 20px 0 20px;
+  margin: 0 auto 0 auto;
+}
+&lt;/style&gt;
+&lt;center&gt; &lt;a href=&#34;https://xy-guo.github.io/&#34;&gt;Xiaoyang Guo&lt;/a&gt;, &lt;a href=&#34;https://shishaoshuai.com/&#34;&gt;Shaoshuai Shi&lt;/a&gt;, &lt;a href=&#34;https://www.ee.cuhk.edu.hk/~xgwang/&#34;&gt;Xiaogang Wang&lt;/a&gt;, &lt;a href=&#34;https://www.ee.cuhk.edu.hk/~hsli/&#34;&gt;Hongsheng Li&lt;/a&gt; &lt;/center&gt;
+&lt;center&gt; CUHK-SenseTime Joint Laboratory, The Chinese University of Hong Kong &lt;/center&gt;
+&lt;center&gt; ICCV 2021 &lt;/center&gt;
+&lt;img src=&#34;https://xy-guo.github.io/liga/framework.png&#34; style=&#34;width:70%;&#34;/&gt;
+&lt;center&gt; &lt;a href=&#34;&#34;&gt;[paper]&lt;/a&gt; &lt;a href=&#34;&#34;&gt;[Supplementary]&lt;/a&gt; &lt;a href=&#34;https://github.com/xy-guo/LIGA-Stereo&#34;&gt;[Code]&lt;/a&gt; &lt;a href=&#34;https://xy-guo.github.io/liga&#34;&gt;[Project Page]&lt;/a&gt;&lt;/center&gt;
+&lt;h4 id=&#34;abstract&#34;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Stereo-based 3D detection aims at detecting 3D objects from stereo images, which provides a low-cost solution for 3D perception. However, its performance is still inferior compared with LiDAR-based detection algorithms. To detect and localize accurate 3D bounding boxes, LiDAR-based detectors encode high-level representations from LiDAR point clouds, such as accurate object boundaries and surface normal directions. In contrast, high-level features learned by stereo-based detectors are easily affected by the erroneous depth estimation due to the limitation of stereo matching. To solve the problem, we propose LIGA-Stereo (&lt;strong&gt;Li&lt;/strong&gt;DAR &lt;strong&gt;G&lt;/strong&gt;eometry &lt;strong&gt;A&lt;/strong&gt;ware Stereo Detector) to learn stereo-based 3D detectors under the guidance of high-level geometry-aware representations of LiDAR-based detection models. In addition, we found existing voxel-based stereo detectors failed to learn semantic features effectively from indirect 3D supervisions. We attach an auxiliary 2D detection head to provide direct 2D semantic supervisions. Experiment results show that the above two strategies improved the geometric and semantic representation capabilities. Compared with the state-of-the-art stereo detector, our method has improved the 3D detection performance of cars, pedestrians, cyclists by &lt;strong&gt;10.44%, 5.69%, 5.97% mAP&lt;/strong&gt; respectively on the official KITTI benchmark. The gap between stereo-based and LiDAR-based 3D detectors is further narrowed.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;center-results-center&#34;&gt;&lt;center&gt; Results &lt;/center&gt;&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://xy-guo.github.io/liga/kitti-train.png&#34; alt=&#34;kitti-train&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://xy-guo.github.io/liga/kitti-train2.png&#34; alt=&#34;kitti-train&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;center-visualization-center&#34;&gt;&lt;center&gt; Visualization &lt;/center&gt;&lt;/h1&gt;
+&lt;img src=&#34;https://xy-guo.github.io/liga/vis.jpg&#34; style=&#34;width:80%;&#34;/&gt;
+&lt;h3 id=&#34;kitti-benchmark&#34;&gt;KITTI Benchmark&lt;/h3&gt;
+&lt;p&gt;If you want to cite our work, please use:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@InProceedings{Guo_2021_ICCV,
+    author = {Guo, Xiaoyang and Shi, Shaoshuai and Wang, Xiaogang and Li, Hongsheng},
+    title = {LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month = {October},
+    year = {2021}
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
