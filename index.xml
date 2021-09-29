@@ -14,9 +14,9 @@
     
     <item>
       <title>LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector</title>
-      <link>https://xy-guo.github.io/publication/liga-iccv21/</link>
+      <link></link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://xy-guo.github.io/publication/liga-iccv21/</guid>
+      <guid></guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -113,9 +113,9 @@
     
     <item>
       <title>Unsupervised Cross-spectral Stereo Matching by Learning to Synthesize</title>
-      <link>https://xy-guo.github.io/publication/spectral-aaai19/</link>
+      <link></link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://xy-guo.github.io/publication/spectral-aaai19/</guid>
+      <guid></guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -135,9 +135,9 @@
     
     <item>
       <title>Group-wise Correlation Stereo Network</title>
-      <link>https://xy-guo.github.io/publication/gwcnet-cvpr19/</link>
+      <link></link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://xy-guo.github.io/publication/gwcnet-cvpr19/</guid>
+      <guid></guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -157,9 +157,9 @@
     
     <item>
       <title>Learning Monocular Depth by Distilling Cross-domain Stereo Networks</title>
-      <link>https://xy-guo.github.io/publication/depth-eccv18/</link>
+      <link></link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>https://xy-guo.github.io/publication/depth-eccv18/</guid>
+      <guid></guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -179,9 +179,9 @@
     
     <item>
       <title>Neural Network Encapsulation</title>
-      <link>https://xy-guo.github.io/publication/capsule-eccv18/</link>
+      <link></link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>https://xy-guo.github.io/publication/capsule-eccv18/</guid>
+      <guid></guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -197,14 +197,6 @@
  --&gt;
 &lt;!-- Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/). --&gt;
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://xy-guo.github.io/admin/config.yml</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://xy-guo.github.io/admin/config.yml</guid>
-      <description></description>
     </item>
     
   </channel>
