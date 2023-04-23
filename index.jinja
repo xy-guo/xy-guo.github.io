@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Xiaoyang Guo</title>
+
+    <meta name="author" content="Xiaoyang Guo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Gelasio:400,300,700' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'Gelasio', sans-serif !important;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- helpful hints: 
+        .col- (extra small) .col-sm- (small devices) .col-md- (medium devices)
+        .col-lg- (large devices) .col-xl- (xlarge devices) 
+    -->
+    
+    <div class="container pt-5">
+        <div class="row"> 
+            <div class="col-10 mx-auto">
+                <!-- introduction row -->
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-4 pr-5 ">
+                        <div class="avatar avatar-xl">
+                            <img src="./images/portrait.jpg" alt="..." width="100%"
+                                class="avatar-img rounded-circle" />
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-8 pt-3">
+                        <div class="row align-items-center">
+                            <h4>Xiaoyang Guo (郭晓阳)</h4>
+                        </div>
+                        <div class="row">
+                            <p class="text-muted">
+                                I did my PhD at The Chinese University of Hong Kong, where I was advised by
+                                Prof. <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a> and Prof. <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>. 
+                                Before that, I got my bachelor degree of Computer Science at Tsinghua University.
+                            </p>
+                            <p class="text-muted">
+                                My research interesets are on combining 3D vision.
+                            </p>
+                        </div>
+                        <div class="row mb-4">
+                            <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a>  &nbsp/&nbsp
+                            <a href="./cv.pdf">CV</a>  &nbsp/&nbsp
+                            <a href="https://scholar.google.com.hk/citations?user=CrK4w4UAAAAJ&hl=en">Google Scholar</a>  &nbsp/&nbsp
+                            <a href="https://github.com/xy-guo/">Github</a>  &nbsp/&nbsp
+                            <a href="https://www.linkedin.com/in/xiaoyang-guo-3a2884135/?originalSubdomain=cn">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" />
+            </div>
+        </div>
+        
+        <div class="row pt-5 pb-5">
+            <div class="col-11 col-md-10 mx-auto">
+                
+                <h4>Research</h4>
+
+                {% for paper in papers %}
+                <div class="row pt-2 pb-2">
+                    <div class="col-8 col-md-3">
+                        <img src="{{ paper.image }}" alt="..." width="100%" />
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <!-- paper title -->
+                        <strong>
+                            <a href="{{ paper.url }}">{{ paper.title }}</a>
+                        </strong>
+                        <br>
+                        <!-- paper authors -->
+                        {% for author in paper.authors %}
+                            <strong></strong>
+                            {% if author.url is not none %}
+                                <a href="{{ author.url }}">{{ author.name }}</a>,
+                            {% else %}
+                                {% if author.name.startswith(name) %}
+                                    <strong>{{ author.name }}</strong>,
+                                {% else %}
+                                    {{ author.name }},
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        <br>
+                        <!-- paper conference -->
+                        <em>{{ paper.conference }}</em>, {{ paper.year }} &nbsp 
+                        {% if paper.special_honor is not none %}
+                            <font color="red"><strong>({{ paper.special_honor }})</strong></font>
+                        {% endif %}
+                        <br>
+                        <!-- paper links -->
+
+                        {% if paper.url_arxiv is not none %}
+                        <a href="{{ paper.url_arxiv }}">arXiv</a>
+                        {% endif %}
+
+                        {% if paper.url_project_page is not none %}
+                        / <a href="{{ paper.url_project_page }}">project page</a>
+                        {% endif %}
+                        
+                        {% if paper.url_paper is not none %}
+                        / <a href="{{ paper.url_paper }}">paper</a>
+                        {% endif %}
+                        
+                        {% if paper.url_video is not none %}
+                        / <a href="{{ paper.url_video }}">video</a>
+                        {% endif %}
+                        
+                        {% if paper.url_poster is not none %}
+                        / <a href="{{ paper.url_poster }}">poster</a>
+                        {% endif %}
+                        <p></p>
+                        {% if paper.description is not none %}
+                        <p>{{ paper.description }}</p>
+                        {% endif %}    
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
