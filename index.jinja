@@ -45,10 +45,9 @@
                                 I did my PhD at The Chinese University of Hong Kong, where I was advised by
                                 Prof. <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a> and Prof. <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>. 
                                 Before that, I got my bachelor degree of Computer Science at Tsinghua University. 
-
-                                Now I am a researcher at Huawei Inc., working on large-scene 3D reconstruction and neural rendering.
                             </p>
                             <p class="text-muted">
+                                Now I am a researcher at Huawei Riemann Lab, mainly working on large-scene 3D reconstruction and neural rendering.
                                 My research interests focus on 3D computer vision, particularly on 3D perception, reconstruction, and rendering (NeRF).
                             </p>
                         </div>
@@ -66,16 +65,16 @@
         </div>
         
         <div class="row pt-5 pb-5">
-            <div class="col-11 col-md-10 mx-auto">
+            <div class="col-11 col-md-9 mx-auto">
                 
                 <h4>Research</h4>
 
                 {% for paper in papers %}
-                <div class="row pt-2 pb-2">
-                    <div class="col-8 col-md-3">
+                <div class="row pt-3 pb-3">
+                    <div class="col-8 col-md-4">
                         <img src="{{ paper.image }}" alt="..." width="100%" />
                     </div>
-                    <div class="col-12 col-md-9">
+                    <div class="col-12 col-md-8">
                         <!-- paper title -->
                         <!-- <strong> -->
                             <a href="{{ paper.url }}">{{ paper.title }}</a>
@@ -85,7 +84,7 @@
                         {% for author in paper.authors %}
                             <strong></strong>
                             {% if author.url is not none %}
-                                <a href="{{ author.url }}">{{ author.name }}</a>,
+                                <a href="{{ author.url }}" class="text-dark">{{ author.name }}</a>,
                             {% else %}
                                 {% if author.name.startswith(name) %}
                                     <strong>{{ author.name }}</strong>,
@@ -98,30 +97,44 @@
                         <!-- paper conference -->
                         <em>{{ paper.conference }}</em>, {{ paper.year }} &nbsp 
                         {% if paper.special_honor is not none %}
-                            <font color="red"><strong>({{ paper.special_honor }})</strong></font>
+                            {% if paper.special_honor|length >= 20 %}
+                                <br>
+                                <font color="red">{{ paper.special_honor }}</font>
+                            {% else %}
+                                <font color="red"><strong>({{ paper.special_honor }})</strong></font>
+                            {% endif %}    
                         {% endif %}
                         <br>
                         <!-- paper links -->
 
                         {% if paper.url_arxiv is not none %}
-                        <a href="{{ paper.url_arxiv }}">arXiv</a>
+                        <a href="{{ paper.url_arxiv }}">[arXiv]</a>
                         {% endif %}
 
                         {% if paper.url_project_page is not none %}
-                        / <a href="{{ paper.url_project_page }}">project page</a>
+                        <a href="{{ paper.url_project_page }}">[project page]</a>
                         {% endif %}
                         
                         {% if paper.url_paper is not none %}
-                        / <a href="{{ paper.url_paper }}">paper</a>
+                        <a href="{{ paper.url_paper }}">[paper]</a>
                         {% endif %}
-                        
+
+                        {% if paper.url_supp is not none %}
+                        <a href="{{ paper.url_supp }}">[supp]</a>
+                        {% endif %}
+
                         {% if paper.url_video is not none %}
-                        / <a href="{{ paper.url_video }}">video</a>
+                        <a href="{{ paper.url_video }}">[video]</a>
                         {% endif %}
                         
                         {% if paper.url_poster is not none %}
-                        / <a href="{{ paper.url_poster }}">poster</a>
+                        <a href="{{ paper.url_poster }}">[poster]</a>
                         {% endif %}
+
+                        {% if paper.url_code is not none %}
+                        <a href="{{ paper.url_code }}">[code]</a>
+                        {% endif %}
+
                         <p></p>
                         {% if paper.description is not none %}
                         <p>{{ paper.description }}</p>
