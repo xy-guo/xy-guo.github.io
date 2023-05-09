@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{{ project.title }}</title>
+
+    <meta name="author" content="Xiaoyang Guo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
+    <style>
+        .mx-auto {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container pt-3 center">
+        <div class="row pt-1 pb-5">
+            <div class="col-12 col-md-10 mx-auto">
+                <div class="row pb-3"><center>
+                    <div class="col-12 col-md-12"><center>
+                        <p>
+                        
+                            <h2>{{ project.title }}</h2>
+                            {% for author in project.paper.authors %}
+                                {% if author.url is not none %}
+                                    <a href="{{ author.url }}">{{ author.name }}</a> &nbsp&nbsp
+                                {% else %}
+                                    {{ author.name }} &nbsp&nbsp
+                                {% endif %}
+                            {% endfor %}
+                            <br>
+                            {{project.paper.affiliation}}
+                            <br>
+                            {{project.paper.conference_short}}
+
+                            <br>
+
+                            {% if paper.url_arxiv is not none %}
+                            <a href="{{ paper.url_arxiv }}">[arXiv]</a>
+                            {% endif %}
+
+                            {% if paper.url_project_page is not none %}
+                            <a href="{{ paper.url_project_page }}">[project page]</a>
+                            {% endif %}
+                            
+                            {% if paper.url_paper is not none %}
+                            <a href="{{ paper.url_paper }}">[paper]</a>
+                            {% endif %}
+
+                            {% if paper.url_supp is not none %}
+                            <a href="{{ paper.url_supp }}">[supp]</a>
+                            {% endif %}
+
+                            {% if paper.url_video is not none %}
+                            <a href="{{ paper.url_video }}">[video]</a>
+                            {% endif %}
+                            
+                            {% if paper.url_poster is not none %}
+                            <a href="{{ paper.url_poster }}">[poster]</a>
+                            {% endif %}
+
+                            {% if paper.url_code is not none %}
+                            <a href="{{ paper.url_code }}">[code]</a>
+                            {% endif %}
+                        
+                        </p>
+                    </center></div>
+                </center></div>
+
+                <div>
+                    {{ project.pre_html }}
+                </div>
+
+                <div>
+                    <div>
+                    <h4><left>Abstract:</left></h4>
+                    <p align="justify">
+                        <em>{{ project.abstract }}</em>
+                    </p>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    {{ project.extra_html }}
+                </div>
+
+                <div>
+                    If you want to cite our work, please use:
+                    <br>
+                    <pre>
+                        <code>
+{{ paper.bib }}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

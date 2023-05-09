@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector</title>
+
+    <meta name="author" content="Xiaoyang Guo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
+    <style>
+        .mx-auto {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container pt-3 center">
+        <div class="row pt-1 pb-5">
+            <div class="col-12 col-md-10 mx-auto">
+                <div class="row pb-3"><center>
+                    <div class="col-12 col-md-12"><center>
+                        <p>
+                        
+                            <h2>LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector</h2>
+                            
+                                
+                                    <a href="https://xy-guo.github.io/">Xiaoyang Guo</a> &nbsp&nbsp
+                                
+                            
+                                
+                                    <a href="https://shishaoshuai.com/">Shaoshuai Shi</a> &nbsp&nbsp
+                                
+                            
+                                
+                                    <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a> &nbsp&nbsp
+                                
+                            
+                                
+                                    <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a> &nbsp&nbsp
+                                
+                            
+                            <br>
+                            CUHK-SenseTime Joint Laboratory, The Chinese University of Hong Kong
+                            <br>
+                            ICCV'21
+
+                            <br>
+
+                            
+                            <a href="https://arxiv.org/abs/2108.08258">[arXiv]</a>
+                            
+
+                            
+                            
+                            
+                            <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Guo_LIGA-Stereo_Learning_LiDAR_Geometry_Aware_Representations_for_Stereo-Based_3D_Detector_ICCV_2021_paper.html">[paper]</a>
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+                            <a href="https://github.com/xy-guo/LIGA-Stereo">[code]</a>
+                            
+                        
+                        </p>
+                    </center></div>
+                </center></div>
+
+                <div>
+                    
+                <center>
+                    <img src="images/liga.png" alt="..." width="60%" />
+                </center>
+            
+                </div>
+
+                <div>
+                    <div>
+                    <h4><left>Abstract:</left></h4>
+                    <p align="justify">
+                        <em>Stereo-based 3D detection aims at detecting 3D object bounding boxes from stereo images using intermediate depth maps or implicit 3D geometry representations, which provides a low-cost solution for 3D perception. However, its performance is still inferior compared with LiDAR-based detection algorithms. To detect and localize accurate 3D bounding boxes, LiDAR-based models can encode accurate object boundaries and surface normal directions from LiDAR point clouds. However, the detection results of stereo-based detectors are easily affected by the erroneous depth features due to the limitation of stereo matching. To solve the problem, we propose LIGA-Stereo (LiDAR Geometry Aware Stereo Detector) to learn stereo-based 3D detectors under the guidance of high-level geometry-aware representations of LiDAR-based detection models. In addition, we found existing voxel-based stereo detectors failed to learn semantic features effectively from indirect 3D supervisions. We attach an auxiliary 2D detection head to provide direct 2D semantic supervisions. Experiment results show that the above two strategies improved the geometric and semantic representation capabilities. Compared with the state-of-the-art stereo detector, our method has improved the 3D detection performance of cars, pedestrians, cyclists by <strong>10.44%, 5.69%, 5.97%</strong> mAP respectively on the official KITTI benchmark. </em>
+                    </p>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    
+                <h4>Results<h4>
+                <p>
+                    <center>
+                        <img src="images/liga-demo.png" alt="..." width="100%" />
+                    </center>
+                </p>        
+                <h4>KITTI Benchmark<h4>
+                <p>
+                    <center>
+                        <img src="images/liga-kitti.png" alt="..." width="80%" />
+                    </center>
+                </p>
+            
+                </div>
+
+                <div>
+                    If you want to cite our work, please use:
+                    <br>
+                    <pre>
+                        <code>
+@InProceedings{Guo_2021_ICCV,
+    author = {Guo, Xiaoyang and Shi, Shaoshuai and Wang, Xiaogang and Li, Hongsheng},
+    title = {LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month = {October},
+    year = {2021}
+}
+        
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
