@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Xiaoyang Guo" />
+
+  <meta name="description"
+    content="LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector" />
+
+  <link rel="alternate" hreflang="en-us" href="https://xy-guo.github.io/liga/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <meta name="theme-color" content="#1565c0" />
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print"
+    onload="this.media='all'">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css"
+    crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css"
+    crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
+    media="print" onload="this.media='all'">
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="canonical" href="https://xy-guo.github.io/liga/" />
+
+  <title>
+    LIGA-Stereo
+  </title>
+</head>
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" class="page-wrapper   no-navbar"
+  data-wc-page-id="6f9f8125a8cd9d7e66520ad2d80254ad">
+
+  <div class="page-body">
+    <style>
+      .article-container {
+        max-width: 60%;
+        padding: 0 20px 0 20px;
+        margin: 0 auto 0 auto;
+      }
+    </style>
+
+    <article class="article">
+
+      <div class="article-container pt-3">
+        <h1>LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector</h1>
+        <div class="article-metadata">
+        </div>
+      </div>
+
+      <div class="article-container">
+        <div class="article-style">
+          <style>
+            .article-container {
+              max-width: 60%;
+              padding: 0 20px 0 20px;
+              margin: 0 auto 0 auto;
+            }
+          </style>
+          <center> 
+            <a href="https://xy-guo.github.io/">Xiaoyang Guo</a>, 
+            <a href="https://shishaoshuai.com/">Shaoshuai Shi</a>, 
+            <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>, 
+            <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a> </center>
+          <center> CUHK-SenseTime Joint Laboratory, The Chinese University of Hong Kong </center>
+          <center> ICCV 2021 </center>
+          <img src="/liga/framework.png" style="width:100%;" />
+          <center> 
+            <a href="/liga/liga-guo-iccv21.pdf">[paper]</a> 
+            <a href="/liga/liga-guo-iccv21-supp.pdf">[Supplementary]</a> 
+            <a href="https://github.com/xy-guo/LIGA-Stereo">[Code]</a>
+            <a href="/liga">[Project Page]</a>
+          </center>
+          <h4 id="abstract">Abstract</h4>
+          <p><em>Stereo-based 3D detection aims at detecting 3D objects from stereo images, which provides a low-cost
+              solution for 3D perception. However, its performance is still inferior compared with LiDAR-based detection
+              algorithms. To detect and localize accurate 3D bounding boxes, LiDAR-based detectors encode high-level
+              representations from LiDAR point clouds, such as accurate object boundaries and surface normal directions.
+              In contrast, high-level features learned by stereo-based detectors are easily affected by the erroneous
+              depth estimation due to the limitation of stereo matching. To solve the problem, we propose LIGA-Stereo
+              (<strong>Li</strong>DAR <strong>G</strong>eometry <strong>A</strong>ware Stereo Detector) to learn
+              stereo-based 3D detectors under the guidance of high-level geometry-aware representations of LiDAR-based
+              detection models. In addition, we found existing voxel-based stereo detectors failed to learn semantic
+              features effectively from indirect 3D supervisions. We attach an auxiliary 2D detection head to provide
+              direct 2D semantic supervisions. Experiment results show that the above two strategies improved the
+              geometric and semantic representation capabilities. Compared with the state-of-the-art stereo detector,
+              our method has improved the 3D detection performance of cars, pedestrians, cyclists by <strong>10.44%,
+                5.69%, 5.97% mAP</strong> respectively on the official KITTI benchmark. The gap between stereo-based and
+              LiDAR-based 3D detectors is further narrowed.</em></p>
+          <h1 id="center-results-center">
+            <center> Results </center>
+          </h1>
+          <p>
+
+          <figure>
+            <div class="d-flex justify-content-center">
+              <div class="w-100"><img src="/liga/kitti-train.png" alt="kitti-train" loading="lazy" style="width:90%;" data-zoomable />
+              </div>
+            </div>
+          </figure>
+          </p>
+          <p>
+
+          <figure>
+            <div class="d-flex justify-content-center">
+              <div class="w-100"><img src="/liga/kitti-train2.png" alt="kitti-train" loading="lazy" style="width:90%;" data-zoomable />
+              </div>
+            </div>
+          </figure>
+          </p>
+          <h1 id="center-visualization-center">
+            <center> Visualization </center>
+          </h1>
+          <center><img src="/liga/vis.jpg" style="width:80%;" /></center>
+          <!-- <h3 id="kitti-benchmark">KITTI Benchmark</h3> -->
+          <p>If you want to cite our work, please use:</p>
+          <pre><code>@InProceedings{Guo_2021_ICCV,
+    author = {Guo, Xiaoyang and Shi, Shaoshuai and Wang, Xiaogang and Li, Hongsheng},
+    title = {LIGA-Stereo: Learning LiDAR Geometry Aware Representations for Stereo-based 3D Detector},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month = {October},
+    year = {2021}
+}
+</code></pre>
+
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"
+    integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+    integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js"
+    integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw=="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

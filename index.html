@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Xiaoyang Guo</title>
+  <meta name="author" content="Xiaoyang Guo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <!-- profile -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p class="name" style="text-align: center;">
+                    Xiaoyang Guo (郭晓阳)
+                  </p>
+                  <p>
+                    I am currently a principal researcher at Horizon Robotics, learning a small team on
+                    3D
+                    reconstruction and simulation for autonomous driving system.
+                    I got my Ph.D. degree from <a href="http://mmlab.ie.cuhk.edu.hk/">Multimedia Lab (MMLab)</a>, <a
+                      href="http://www.cuhk.edu.hk/english/index.html">the Chinese University of Hong Kong</a>,
+                    where I was advised by <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and <a
+                      href="https://www.ee.cuhk.edu.hk/~hsli/">Prof. Hongsheng Li</a>.
+                    Before that, I got my bachelor degree of Computer Science at <a
+                      href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
+                  </p>
+                  <p>
+                    I'm intertested in 3D computer vision and generative AI, especially large-scale 3D reconstruction,
+                    rendering, and generation..
+                  </p>
+                  <p>
+                    Looking for self-motivated interns on neural rendering and generative AI. Feel free to email me
+                    if you are interested.
+                  </p>
+                  <p style="text-align:center">
+                    <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="/files/cv.pdf">CV</a> &nbsp;/&nbsp;
+                    <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp; -->
+                    <a href="https://scholar.google.com/citations?hl=en&user=CrK4w4UAAAAJ">Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/xy-guo">Github</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:30%;max-width:30%">
+                  <a href="/images/portrait/xiaoyang.jpg">
+                    <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo"
+                      src="/images/portrait/xiaoyang.jpg" class="hoverZoomLink"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- papers -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <!-- European Conference on Computer Vision, 2025 - NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis -->
+              <tr onmouseout="ngprt_stop()" onmouseover="ngprt_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="ngprt_hover" style="vertical-align:middle">
+                      <video width=100% height=100% muted autoplay loop>
+                        <source src="./images/ngp_rt_shitang.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div id="ngprt_default">
+                      <img src='./images/ngprt.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function ngprt_start() {
+                      document.getElementById('ngprt_hover').style.opacity = "1";
+                      document.getElementById('ngprt_default').style.opacity = "0";
+                    }
+                    function ngprt_stop() {
+                      document.getElementById('ngprt_hover').style.opacity = "0";
+                      document.getElementById('ngprt_default').style.opacity = "1";
+                    }
+                    ngprt_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_9">
+                    <span class="papertitle">NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis
+                    </span>
+                  </a>
+                  <br>
+                  Yubin Hu*,
+                  <strong>Xiaoyang Guo*</strong>,
+                  Yang Xiao,
+                  Jingwei Huang,
+                  Yong-Jin Liu,
+                  <br>
+                  <em>European Conference on Computer Vision</em>, 2025 &nbsp
+                  <font color="red"><strong>(Realtime streamed on Petal Map App)</strong></font>
+                  <br>
+                  <a href="https://arxiv.org/abs/2407.10482">[arXiv]</a>
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_9">[paper]</a>
+                </td>
+              </tr>
+              <!-- ACM Transactions on Graphics (TOG) , 2023 - ArrangementNet: Learning Scene Arrangements for Vectorized Indoor Scene Modeling -->
+              <tr onmouseout="arrangement_stop()" onmouseover="arrangement_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="arrangement_hover" style="vertical-align:middle">
+                        <img src='./images/arrangementnet.png' width=100%>
+                    </div>
+                    <div id="arrangement_default">
+                      <img src='./images/arrangementnet.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function arrangement_start() {
+                      document.getElementById('arrangement_hover').style.opacity = "1";
+                      document.getElementById('arrangement_default').style.opacity = "0";
+                    }
+                    function arrangement_stop() {
+                      document.getElementById('arrangement_hover').style.opacity = "0";
+                      document.getElementById('arrangement_default').style.opacity = "1";
+                    }
+                    arrangement_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://dl.acm.org/doi/10.1145/3592122">
+                    <span class="papertitle">ArrangementNet: Learning Scene Arrangements for Vectorized Indoor Scene Modeling
+                    </span>
+                  </a>
+                  <br>
+                  Jingwei Huang,
+                  Shanshan Zhang,
+                  Bo Duan,
+                  <strong>Xiaoyang Guo</strong>,
+                  Minwei Sun,
+                  Li Yi,
+                  <br>
+                  <em>ACM Transactions on Graphics (TOG) </em>, 2023 &nbsp
+                  <font color="red"><strong>(Journal Track)</strong></font>
+                  <br>
+                  <a href="">[arXiv]</a>
+                  <a href="https://dl.acm.org/doi/10.1145/3592122">[paper]</a>
+                </td>
+              </tr>
+              <!-- International Conference on Computer Vision (<b>ICCV</b>), 2021 - LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector -->
+              <tr onmouseout="liga_stop()" onmouseover="liga_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="liga_hover" style="vertical-align:middle">
+                        <img src='./images/liga.png' width=100%>
+                    </div>
+                    <div id="liga_default">
+                      <img src='./images/liga.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function liga_start() {
+                      document.getElementById('liga_hover').style.opacity = "1";
+                      document.getElementById('liga_default').style.opacity = "0";
+                    }
+                    function liga_stop() {
+                      document.getElementById('liga_hover').style.opacity = "0";
+                      document.getElementById('liga_default').style.opacity = "1";
+                    }
+                    liga_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Guo_LIGA-Stereo_Learning_LiDAR_Geometry_Aware_Representations_for_Stereo-Based_3D_Detector_ICCV_2021_paper.html">
+                    <span class="papertitle">LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector
+                    </span>
+                  </a>
+                  <br>
+                  <strong>Xiaoyang Guo</strong>,
+                  Shaoshuai Shi,
+                  Xiaogang Wang,
+                  Hongsheng Li,
+                  <br>
+                  <em>International Conference on Computer Vision (<b>ICCV</b>)</em>, 2021 &nbsp
+                  <font color="red"><strong>(Ranked 1st place among stereo-based 3D detection methods on KITTI (July 2021), refer to <a href="https://www.cvlibs.net/datasets/kitti/eval_object_detail.php?&result=d5d1938b704537150df7f8403d173aa16fe9ba17">here</a>.)</strong></font>
+                  <br>
+                  <a href="https://arxiv.org/abs/2108.08258">[arXiv]</a>
+                  <a href="/liga">[project page]</a>
+                  <a href="https://openaccess.thecvf.com/content/ICCV2021/html/Guo_LIGA-Stereo_Learning_LiDAR_Geometry_Aware_Representations_for_Stereo-Based_3D_Detector_ICCV_2021_paper.html">[paper]</a>
+                  <a href="https://github.com/xy-guo/LIGA-Stereo">[code]</a>
+                </td>
+              </tr>
+              <!-- Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2019 - Group-wise Correlation Stereo Network -->
+              <tr onmouseout="gwcnet_stop()" onmouseover="gwcnet_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="gwcnet_hover" style="vertical-align:middle">
+                        <img src='./images/gwcnet.jpg' width=100%>
+                    </div>
+                    <div id="gwcnet_default">
+                      <img src='./images/gwcnet.jpg' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function gwcnet_start() {
+                      document.getElementById('gwcnet_hover').style.opacity = "1";
+                      document.getElementById('gwcnet_default').style.opacity = "0";
+                    }
+                    function gwcnet_stop() {
+                      document.getElementById('gwcnet_hover').style.opacity = "0";
+                      document.getElementById('gwcnet_default').style.opacity = "1";
+                    }
+                    gwcnet_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Guo_Group-Wise_Correlation_Stereo_Network_CVPR_2019_paper.html">
+                    <span class="papertitle">Group-wise Correlation Stereo Network
+                    </span>
+                  </a>
+                  <br>
+                  <strong>Xiaoyang Guo</strong>,
+                  Kai Yang,
+                  Wukui Yang,
+                  Xiaogang Wang,
+                  Hongsheng Li,
+                  <br>
+                  <em>Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)</em>, 2019 &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/1903.04025">[arXiv]</a>
+                  <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Guo_Group-Wise_Correlation_Stereo_Network_CVPR_2019_paper.html">[paper]</a>
+                  <a href="https://github.com/xy-guo/GwcNet">[code]</a>
+                </td>
+              </tr>
+              <!-- AAAI, 2019 - Unsupervised Cross-Spectral Stereo Matching by Learning to Synthesize -->
+              <tr onmouseout="unsupstereo_stop()" onmouseover="unsupstereo_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="unsupstereo_hover" style="vertical-align:middle">
+                        <img src='./images/cs-stereo.jpg' width=100%>
+                    </div>
+                    <div id="unsupstereo_default">
+                      <img src='./images/cs-stereo.jpg' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function unsupstereo_start() {
+                      document.getElementById('unsupstereo_hover').style.opacity = "1";
+                      document.getElementById('unsupstereo_default').style.opacity = "0";
+                    }
+                    function unsupstereo_stop() {
+                      document.getElementById('unsupstereo_hover').style.opacity = "0";
+                      document.getElementById('unsupstereo_default').style.opacity = "1";
+                    }
+                    unsupstereo_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4894">
+                    <span class="papertitle">Unsupervised Cross-Spectral Stereo Matching by Learning to Synthesize
+                    </span>
+                  </a>
+                  <br>
+                  <strong>Xiaoyang Guo*</strong>,
+                  Mingyang Liang*,
+                  Hongsheng Li,
+                  Xiaogang Wang,
+                  You Song,
+                  <br>
+                  <em>AAAI</em>, 2019 &nbsp
+                  <font color="red"><strong>(Oral Presentation)</strong></font>
+                  <br>
+                  <a href="https://arxiv.org/abs/1903.01078">[arXiv]</a>
+                  <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4894">[paper]</a>
+                </td>
+              </tr>
+              <!-- European Conference on Computer Vision (<b>ECCV</b>), 2018 - Learning Monocular Depth by Distilling Cross-domain Stereo Networks -->
+              <tr onmouseout="distillmono_stop()" onmouseover="distillmono_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="distillmono_hover" style="vertical-align:middle">
+                        <img src='./images/mono.jpg' width=100%>
+                    </div>
+                    <div id="distillmono_default">
+                      <img src='./images/mono.jpg' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function distillmono_start() {
+                      document.getElementById('distillmono_hover').style.opacity = "1";
+                      document.getElementById('distillmono_default').style.opacity = "0";
+                    }
+                    function distillmono_stop() {
+                      document.getElementById('distillmono_hover').style.opacity = "0";
+                      document.getElementById('distillmono_default').style.opacity = "1";
+                    }
+                    distillmono_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Xiaoyang_Guo_Learning_Monocular_Depth_ECCV_2018_paper.html">
+                    <span class="papertitle">Learning Monocular Depth by Distilling Cross-domain Stereo Networks
+                    </span>
+                  </a>
+                  <br>
+                  <strong>Xiaoyang Guo</strong>,
+                  Hongsheng Li,
+                  Shuai Yi,
+                  Jimmy Ren,
+                  Xiaogang Wang,
+                  <br>
+                  <em>European Conference on Computer Vision (<b>ECCV</b>)</em>, 2018 &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/1808.06586">[arXiv]</a>
+                  <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Xiaoyang_Guo_Learning_Monocular_Depth_ECCV_2018_paper.html">[paper]</a>
+                  <a href="https://www.youtube.com/watch?v=QAcuYT7q_gY">[video]</a>
+                  <a href="https://github.com/xy-guo/Learning-Monocular-Depth-by-Stereo">[code]</a>
+                </td>
+              </tr>
+              <!-- European Conference on Computer Vision (<b>ECCV</b>), 2018 - Neural Network Encapsulation -->
+              <tr onmouseout="encap_stop()" onmouseover="encap_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="encap_hover" style="vertical-align:middle">
+                        <img src='./images/encap.png' width=100%>
+                    </div>
+                    <div id="encap_default">
+                      <img src='./images/encap.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function encap_start() {
+                      document.getElementById('encap_hover').style.opacity = "1";
+                      document.getElementById('encap_default').style.opacity = "0";
+                    }
+                    function encap_stop() {
+                      document.getElementById('encap_hover').style.opacity = "0";
+                      document.getElementById('encap_default').style.opacity = "1";
+                    }
+                    encap_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Hongyang_Li_Neural_Network_Encapsulation_ECCV_2018_paper.html">
+                    <span class="papertitle">Neural Network Encapsulation
+                    </span>
+                  </a>
+                  <br>
+                  Hongyang Li,
+                  <strong>Xiaoyang Guo</strong>,
+                  Bo Dai,
+                  Wanli Ouyang,
+                  Xiaogang Wang,
+                  <br>
+                  <em>European Conference on Computer Vision (<b>ECCV</b>)</em>, 2018 &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/1808.03749">[arXiv]</a>
+                  <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Hongyang_Li_Neural_Network_Encapsulation_ECCV_2018_paper.html">[paper]</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <!-- <h2>Miscellanea</h2> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table width="100%" align="center" border="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <!-- <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td> -->
+                <td width="75%" valign="center">
+                  <a href=""></a>
+                </td>
+              </tr>
+              <!-- <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/cs188.jpg" alt="cs188">
+                </td>
+                <td width="75%" valign="center">
+                  <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor,
+                    </a>
+                  <br>
+                  <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor,
+                    CS188 Fall 2010</a>
+                  <br>
+                  <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd
+                    Edition</a>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+          <!-- footer -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Thanks for the template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron
+                    </a>.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+  </table>
+</body>
+</html>
