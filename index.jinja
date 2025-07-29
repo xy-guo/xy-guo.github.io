@@ -29,21 +29,20 @@
                     Xiaoyang Guo (郭晓阳)
                   </p>
                   <p>
-                    I am currently a Principal Researcher at Horizon Robotics, leading a team focused on
-                    3D reconstruction and simulation for autonomous driving systems.
-                    I got my Ph.D. degree from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Lab (MMLab)</a> at <a
-                      href="http://www.cuhk.edu.hk/english/index.html">the Chinese University of Hong Kong</a>,
+                    I am currently a Principal Researcher at Horizon Robotics, where I lead a team dedicated to
+                    3D reconstruction, generation, and simulation for autonomous driving systems.
+                    I received my Ph.D. from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Laboratory (MMLab)</a> at <a
+                      href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>,
                     where I was fortunate to be advised by <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and <a
                       href="https://www.ee.cuhk.edu.hk/~hsli/">Prof. Hongsheng Li</a>.
-                    Prior to this, I obtained my Bachelor's degree in Computer Science from <a
+                    Prior to that, I obtained my Bachelor's degree in Computer Science from <a
                       href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
                   </p>
                   <p>
-                    I'm particularly intertested in 3D computer vision and generative AI, with a focus on large-scale 3D reconstruction,
-                    rendering, and generation.
+                    My research interests lie at the intersection of 3D computer vision and generative AI, with a particular focus on large-scale 3D reconstruction, neural rendering, and scene generation.
                   </p>
                   <p>
-                    I am looking for self-motivated interns to work on projects related to neural rendering, generative AI, and 3D reconstruction for autonomous driving. If you are interested, please feel free to email me.
+                    I am actively seeking highly motivated interns to collaborate on projects involving neural rendering, video generation, and 3D foundation models. If you're interested, feel free to reach out via email.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -110,16 +109,16 @@
                   {% for author in paper.authors %}
                   {% if not author.name.startswith(name) %}
                   {% if author.url is not none %}
-                  <a href="{{author.url}}">{{author.name}}</a>,
+                  <a href="{{author.url}}">{{author.name}}</a>{% if not loop.last %},{% endif %}
                   {% else %}
-                  {{author.name}},
+                  {{author.name}}{% if not loop.last %},{% endif %}
                   {% endif %}
                   {% else %}
                   <strong>{{author.name}}</strong>,
                   {% endif %}
                   {% endfor %}
                   <br>
-                  <em>{{paper.conference}}</em>, {{paper.year}} &nbsp
+                  <em>{{paper.conference}}, <strong>{{paper.conference_short}}</strong></em> &nbsp
                   {% if paper.special_honor is not none %}
                   <font color="red"><strong>({{paper.special_honor}})</strong></font>
                   {% endif %}
@@ -153,8 +152,12 @@
                   <a href="{{ paper.url_code }}">[code]</a>
                   {% endif %}
 
+                  {% if paper.url_dataset is not none %}
+                  <a href="{{ paper.url_dataset }}">[dataset]</a>
+                  {% endif %}
+
                   {% if paper.description is not none %}
-                  <p>{{ paper.description }}</p>
+                  <p><font color="gray"">{{paper.description}}</font></p>
                   {% endif %}
                 </td>
               </tr>

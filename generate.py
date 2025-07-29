@@ -44,6 +44,7 @@ class Paper:
     url_video: str = None
     url_poster: str = None
     url_code: str = None
+    url_dataset: str = None
     description: str = None
     image: str = None
     image_after: str = None
@@ -62,12 +63,18 @@ class Experience:
 
 
 def gen_author_list(*author_names):
+    if len(author_names) == 1 and ',' in author_names[0]:
+        author_names = author_names[0].split(',')
+    author_names = [name.strip() for name in author_names]
     authors = []
     for author_name in author_names:
         url = None
         for name, link in author_links.items():
             if author_name.startswith(name):
+                url = link
                 break
+        if author_name[-1] in ["†", "‡"]:
+            author_name = author_name[:-1] + f"<sup>{author_name[-1]}</sup>"
         authors.append(Author(
             name=author_name,
             url=url
@@ -77,6 +84,58 @@ def gen_author_list(*author_names):
 
 def get_papers():
     papers = []
+    papers.append(Paper(
+        tag="rad",
+        title="Rad: Training an End-to-end Driving Policy via Large-scale 3dgs-based Reinforcement Learning",
+        short_title="RAD",
+        conference="Preprint",
+        conference_short="Arxiv'25",
+        year=2025,
+        authors=gen_author_list("Hao Gao, Shaoyu Chen, Bo Jiang, Bencheng Liao, Yiang Shi, Xiaoyang Guo, Yuechuan Pu, Haoran Yin, Xiangyu Li, Xinbang Zhang, Ying Zhang, Wenyu Liu, Qian Zhang, Xinggang Wang"),
+        url="https://arxiv.org/abs/2502.13144",
+        url_arxiv="https://arxiv.org/abs/2502.13144",
+        url_project_page="https://hgao-cv.github.io/RAD/",
+        image="./images/rad.png",
+    ))
+    papers.append(Paper(
+        tag="calib",
+        title="Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration",
+        short_title="DM-Calib",
+        conference="International Conference on Computer Vision",
+        conference_short="ICCV'25",
+        year=2025,
+        authors=gen_author_list("Junyuan Deng", "Wei Yin", "Xiaoyang Guo‡", "Qian Zhang", "Xiaotao Hu", "Weiqiang Ren", "Xiao-Xiao Long", "Ping Tan†"),
+        url="https://arxiv.org/pdf/2411.17240",
+        url_arxiv="https://arxiv.org/pdf/2411.17240",
+        url_code="https://github.com/JunyuanDeng/DM-Calib",
+        image="./images/dm_calib.png",
+    ))
+    papers.append(Paper(
+        tag="epona",
+        title="Epona: Autoregressive Diffusion World Model for Autonomous Driving",
+        short_title="Epona",
+        conference="International Conference on Computer Vision",
+        conference_short="ICCV'25",
+        year=2025,
+        authors=gen_author_list("Kaiwen Zhang, Zhenyu Tang, Xiaotao Hu, Xingang Pan, Xiaoyang Guo, Yuan Liu, Jingwei Huang, Li Yuan, Qian Zhang, Xiaoxiao Long, Xun Cao, Wei Yin"),
+        url="https://arxiv.org/pdf/2506.24113",
+        url_arxiv="https://arxiv.org/abs/2506.24113",
+        url_project_page="https://kevin-thu.github.io/Epona/",
+        url_code="https://kevin-thu.github.io/Epona/",
+        image="./images/epona.png",
+    ))
+    papers.append(Paper(
+        tag="stabledepth",
+        title="StableDepth: Scene-Consistent and Scale-Invariant Monocular Depth",
+        short_title="StableDepth",
+        conference="International Conference on Computer Vision",
+        conference_short="ICCV'25",
+        year=2025,
+        authors=gen_author_list("Zheng Zhang, Lihe Yang, Tianyu Yang, Chaohui Yu, Xiaoyang Guo, Yixing Lao, Hengshuang Zhao"),
+        url="",
+        url_arxiv="",
+        image="./images/stabledepth.png",
+    ))
     papers.append(Paper(
         tag="ngprt",
         title="NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis",
@@ -91,6 +150,20 @@ def get_papers():
         image="./images/ngprt.png",
         special_honor="Realtime streamed on Petal Map App",
         video_after="./images/ngp_rt_shitang.mp4"
+    ))
+    papers.append(Paper(
+        tag="ss3dm",
+        title="SS3DM: Self-Supervised 3D Reconstruction from Monocular Videos",
+        short_title="SS3DM",
+        conference="Advances in Neural Information Processing Systems",
+        conference_short="NeurIPS'24 (DB Track)",
+        year=2024,
+        authors=gen_author_list("Yubin Hu", "Kairui Wen", "Heng Zhou", "Xiaoyang Guo", "Yong-Jin Liu"),
+        url="https://proceedings.neurips.cc/paper_files/paper/2024/hash/c11767cd469b8d8bd7f168e61b3cc8bc-Abstract-Datasets_and_Benchmarks_Track.html",
+        url_arxiv="https://arxiv.org/abs/2410.21739",
+        url_project_page="https://github.com/THU-LYJ-Lab/SS3DM-Exporter",
+        url_dataset="https://huggingface.co/datasets/SS3DM/SS3DM-Dataset/tree/main",
+        image="./images/ss3dm.png",
     ))
     papers.append(Paper(
         tag="arrangement",
@@ -110,7 +183,7 @@ def get_papers():
         tag="liga",
         title="LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector",
         short_title="LIGA-Stereo",
-        conference="International Conference on Computer Vision (<b>ICCV</b>)",
+        conference="International Conference on Computer Vision)",
         conference_short="ICCV'21",
         year=2021,
         authors=gen_author_list("Xiaoyang Guo", "Shaoshuai Shi", "Xiaogang Wang", "Hongsheng Li"),
@@ -138,7 +211,7 @@ def get_papers():
         tag="gwcnet",
         title="Group-wise Correlation Stereo Network",
         short_title="GwcNet",
-        conference="Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)",
+        conference="Conference on Computer Vision and Pattern Recognition",
         conference_short="CVPR'19",
         year=2019,
         authors=gen_author_list("Xiaoyang Guo", "Kai Yang", "Wukui Yang", "Xiaogang Wang", "Hongsheng Li"),
@@ -167,7 +240,7 @@ def get_papers():
         tag="distillmono",
         title="Learning Monocular Depth by Distilling Cross-domain Stereo Networks",
         short_title=None,
-        conference="European Conference on Computer Vision (<b>ECCV</b>)",
+        conference="European Conference on Computer Vision",
         conference_short="ECCV'18",
         year=2018,
         authors=gen_author_list("Xiaoyang Guo", "Hongsheng Li", "Shuai Yi", "Jimmy Ren", "Xiaogang Wang"),
@@ -183,7 +256,7 @@ def get_papers():
         tag="encap",
         title="Neural Network Encapsulation",
         short_title="Encap",
-        conference="European Conference on Computer Vision (<b>ECCV</b>)",
+        conference="European Conference on Computer Vision",
         conference_short="ECCV'18",
         year=2018,
         authors=gen_author_list("Hongyang Li", "Xiaoyang Guo", "Bo Dai", "Wanli Ouyang", "Xiaogang Wang"),

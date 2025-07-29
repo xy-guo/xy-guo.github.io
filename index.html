@@ -24,21 +24,20 @@
                     Xiaoyang Guo (郭晓阳)
                   </p>
                   <p>
-                    I am currently a Principal Researcher at Horizon Robotics, leading a team focused on
-                    3D reconstruction and simulation for autonomous driving systems.
-                    I got my Ph.D. degree from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Lab (MMLab)</a> at <a
-                      href="http://www.cuhk.edu.hk/english/index.html">the Chinese University of Hong Kong</a>,
+                    I am currently a Principal Researcher at Horizon Robotics, where I lead a team dedicated to
+                    3D reconstruction, generation, and simulation for autonomous driving systems.
+                    I received my Ph.D. from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Laboratory (MMLab)</a> at <a
+                      href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>,
                     where I was fortunate to be advised by <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and <a
                       href="https://www.ee.cuhk.edu.hk/~hsli/">Prof. Hongsheng Li</a>.
-                    Prior to this, I obtained my Bachelor's degree in Computer Science from <a
+                    Prior to that, I obtained my Bachelor's degree in Computer Science from <a
                       href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
                   </p>
                   <p>
-                    I'm particularly intertested in 3D computer vision and generative AI, with a focus on large-scale 3D reconstruction,
-                    rendering, and generation.
+                    My research interests lie at the intersection of 3D computer vision and generative AI, with a particular focus on large-scale 3D reconstruction, neural rendering, and scene generation.
                   </p>
                   <p>
-                    I am looking for self-motivated interns to work on projects related to neural rendering, generative AI, and 3D reconstruction for autonomous driving. If you are interested, please feel free to email me.
+                    I am actively seeking highly motivated interns to collaborate on projects involving neural rendering, video generation, and 3D foundation models. If you're interested, feel free to reach out via email.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -60,6 +59,191 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+              <!-- Preprint, 2025 - Rad: Training an End-to-end Driving Policy via Large-scale 3dgs-based Reinforcement Learning -->
+              <tr onmouseout="rad_stop()" onmouseover="rad_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="rad_hover" style="vertical-align:middle">
+                        <img src='./images/rad.png' width=100%>
+                    </div>
+                    <div id="rad_default">
+                      <img src='./images/rad.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function rad_start() {
+                      document.getElementById('rad_hover').style.opacity = "1";
+                      document.getElementById('rad_default').style.opacity = "0";
+                    }
+                    function rad_stop() {
+                      document.getElementById('rad_hover').style.opacity = "0";
+                      document.getElementById('rad_default').style.opacity = "1";
+                    }
+                    rad_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://arxiv.org/abs/2502.13144">
+                    <span class="papertitle">Rad: Training an End-to-end Driving Policy via Large-scale 3dgs-based Reinforcement Learning
+                    </span>
+                  </a>
+                  <br>
+                  Hao Gao,
+                  Shaoyu Chen,
+                  Bo Jiang,
+                  Bencheng Liao,
+                  Yiang Shi,
+                  <strong>Xiaoyang Guo</strong>,
+                  Yuechuan Pu,
+                  Haoran Yin,
+                  Xiangyu Li,
+                  Xinbang Zhang,
+                  Ying Zhang,
+                  Wenyu Liu,
+                  Qian Zhang,
+                  Xinggang Wang
+                  <br>
+                  <em>Preprint, <strong>Arxiv'25</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2502.13144">[arXiv]</a>
+                  <a href="https://hgao-cv.github.io/RAD/">[project page]</a>
+                </td>
+              </tr>
+              <!-- International Conference on Computer Vision, 2025 - Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration -->
+              <tr onmouseout="calib_stop()" onmouseover="calib_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="calib_hover" style="vertical-align:middle">
+                        <img src='./images/dm_calib.png' width=100%>
+                    </div>
+                    <div id="calib_default">
+                      <img src='./images/dm_calib.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function calib_start() {
+                      document.getElementById('calib_hover').style.opacity = "1";
+                      document.getElementById('calib_default').style.opacity = "0";
+                    }
+                    function calib_stop() {
+                      document.getElementById('calib_hover').style.opacity = "0";
+                      document.getElementById('calib_default').style.opacity = "1";
+                    }
+                    calib_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://arxiv.org/pdf/2411.17240">
+                    <span class="papertitle">Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration
+                    </span>
+                  </a>
+                  <br>
+                  Junyuan Deng,
+                  Wei Yin,
+                  <strong>Xiaoyang Guo<sup>‡</sup></strong>,
+                  Qian Zhang,
+                  Xiaotao Hu,
+                  Weiqiang Ren,
+                  Xiao-Xiao Long,
+                  Ping Tan<sup>†</sup>
+                  <br>
+                  <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/pdf/2411.17240">[arXiv]</a>
+                  <a href="https://github.com/JunyuanDeng/DM-Calib">[code]</a>
+                </td>
+              </tr>
+              <!-- International Conference on Computer Vision, 2025 - Epona: Autoregressive Diffusion World Model for Autonomous Driving -->
+              <tr onmouseout="epona_stop()" onmouseover="epona_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="epona_hover" style="vertical-align:middle">
+                        <img src='./images/epona.png' width=100%>
+                    </div>
+                    <div id="epona_default">
+                      <img src='./images/epona.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function epona_start() {
+                      document.getElementById('epona_hover').style.opacity = "1";
+                      document.getElementById('epona_default').style.opacity = "0";
+                    }
+                    function epona_stop() {
+                      document.getElementById('epona_hover').style.opacity = "0";
+                      document.getElementById('epona_default').style.opacity = "1";
+                    }
+                    epona_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://arxiv.org/pdf/2506.24113">
+                    <span class="papertitle">Epona: Autoregressive Diffusion World Model for Autonomous Driving
+                    </span>
+                  </a>
+                  <br>
+                  Kaiwen Zhang,
+                  Zhenyu Tang,
+                  Xiaotao Hu,
+                  Xingang Pan,
+                  <strong>Xiaoyang Guo</strong>,
+                  Yuan Liu,
+                  Jingwei Huang,
+                  Li Yuan,
+                  Qian Zhang,
+                  Xiaoxiao Long,
+                  Xun Cao,
+                  Wei Yin
+                  <br>
+                  <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2506.24113">[arXiv]</a>
+                  <a href="https://kevin-thu.github.io/Epona/">[project page]</a>
+                  <a href="https://kevin-thu.github.io/Epona/">[code]</a>
+                </td>
+              </tr>
+              <!-- International Conference on Computer Vision, 2025 - StableDepth: Scene-Consistent and Scale-Invariant Monocular Depth -->
+              <tr onmouseout="stabledepth_stop()" onmouseover="stabledepth_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="stabledepth_hover" style="vertical-align:middle">
+                        <img src='./images/stabledepth.png' width=100%>
+                    </div>
+                    <div id="stabledepth_default">
+                      <img src='./images/stabledepth.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function stabledepth_start() {
+                      document.getElementById('stabledepth_hover').style.opacity = "1";
+                      document.getElementById('stabledepth_default').style.opacity = "0";
+                    }
+                    function stabledepth_stop() {
+                      document.getElementById('stabledepth_hover').style.opacity = "0";
+                      document.getElementById('stabledepth_default').style.opacity = "1";
+                    }
+                    stabledepth_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="">
+                    <span class="papertitle">StableDepth: Scene-Consistent and Scale-Invariant Monocular Depth
+                    </span>
+                  </a>
+                  <br>
+                  Zheng Zhang,
+                  Lihe Yang,
+                  Tianyu Yang,
+                  Chaohui Yu,
+                  <strong>Xiaoyang Guo</strong>,
+                  Yixing Lao,
+                  Hengshuang Zhao
+                  <br>
+                  <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
+                  <br>
+                  <a href="">[arXiv]</a>
+                </td>
+              </tr>
               <!-- European Conference on Computer Vision, 2025 - NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis -->
               <tr onmouseout="ngprt_stop()" onmouseover="ngprt_start()" >
                 <td style="padding:10px;width:25%;vertical-align:middle">
@@ -96,13 +280,55 @@
                   <strong>Xiaoyang Guo*</strong>,
                   Yang Xiao,
                   Jingwei Huang,
-                  Yong-Jin Liu,
+                  Yong-Jin Liu
                   <br>
-                  <em>European Conference on Computer Vision</em>, 2025 &nbsp
+                  <em>European Conference on Computer Vision, <strong>ECCV'25</strong></em> &nbsp
                   <font color="red"><strong>(Realtime streamed on Petal Map App)</strong></font>
                   <br>
                   <a href="https://arxiv.org/abs/2407.10482">[arXiv]</a>
                   <a href="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_9">[paper]</a>
+                </td>
+              </tr>
+              <!-- Advances in Neural Information Processing Systems, 2024 - SS3DM: Self-Supervised 3D Reconstruction from Monocular Videos -->
+              <tr onmouseout="ss3dm_stop()" onmouseover="ss3dm_start()" >
+                <td style="padding:10px;width:25%;vertical-align:middle">
+                  <div class="one" style="margin:auto">
+                    <div class="two" id="ss3dm_hover" style="vertical-align:middle">
+                        <img src='./images/ss3dm.png' width=100%>
+                    </div>
+                    <div id="ss3dm_default">
+                      <img src='./images/ss3dm.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function ss3dm_start() {
+                      document.getElementById('ss3dm_hover').style.opacity = "1";
+                      document.getElementById('ss3dm_default').style.opacity = "0";
+                    }
+                    function ss3dm_stop() {
+                      document.getElementById('ss3dm_hover').style.opacity = "0";
+                      document.getElementById('ss3dm_default').style.opacity = "1";
+                    }
+                    ss3dm_stop()
+                  </script>
+                </td>
+                <td style="padding:30px;width:75%;vertical-align:middle">
+                  <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/c11767cd469b8d8bd7f168e61b3cc8bc-Abstract-Datasets_and_Benchmarks_Track.html">
+                    <span class="papertitle">SS3DM: Self-Supervised 3D Reconstruction from Monocular Videos
+                    </span>
+                  </a>
+                  <br>
+                  Yubin Hu,
+                  Kairui Wen,
+                  Heng Zhou,
+                  <strong>Xiaoyang Guo</strong>,
+                  Yong-Jin Liu
+                  <br>
+                  <em>Advances in Neural Information Processing Systems, <strong>NeurIPS'24 (DB Track)</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2410.21739">[arXiv]</a>
+                  <a href="https://github.com/THU-LYJ-Lab/SS3DM-Exporter">[project page]</a>
+                  <a href="https://huggingface.co/datasets/SS3DM/SS3DM-Dataset/tree/main">[dataset]</a>
                 </td>
               </tr>
               <!-- ACM Transactions on Graphics (TOG) , 2023 - ArrangementNet: Learning Scene Arrangements for Vectorized Indoor Scene Modeling -->
@@ -139,16 +365,16 @@
                   Bo Duan,
                   <strong>Xiaoyang Guo</strong>,
                   Minwei Sun,
-                  Li Yi,
+                  Li Yi
                   <br>
-                  <em>ACM Transactions on Graphics (TOG) </em>, 2023 &nbsp
+                  <em>ACM Transactions on Graphics (TOG) , <strong>TOG'23</strong></em> &nbsp
                   <font color="red"><strong>(Journal Track)</strong></font>
                   <br>
                   <a href="">[arXiv]</a>
                   <a href="https://dl.acm.org/doi/10.1145/3592122">[paper]</a>
                 </td>
               </tr>
-              <!-- International Conference on Computer Vision (<b>ICCV</b>), 2021 - LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector -->
+              <!-- International Conference on Computer Vision), 2021 - LIGA-Stereo: Learning Lidar Geometry aware Representations for Stereo-based 3d Detector -->
               <tr onmouseout="liga_stop()" onmouseover="liga_start()" >
                 <td style="padding:10px;width:25%;vertical-align:middle">
                   <div class="one" style="margin:auto">
@@ -178,11 +404,11 @@
                   </a>
                   <br>
                   <strong>Xiaoyang Guo</strong>,
-                  Shaoshuai Shi,
-                  Xiaogang Wang,
-                  Hongsheng Li,
+                  <a href="https://shishaoshuai.com/">Shaoshuai Shi</a>,
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>,
+                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>
                   <br>
-                  <em>International Conference on Computer Vision (<b>ICCV</b>)</em>, 2021 &nbsp
+                  <em>International Conference on Computer Vision), <strong>ICCV'21</strong></em> &nbsp
                   <font color="red"><strong>(Ranked 1st place among stereo-based 3D detection methods on KITTI (July 2021), refer to <a href="https://www.cvlibs.net/datasets/kitti/eval_object_detail.php?&result=d5d1938b704537150df7f8403d173aa16fe9ba17">here</a>.)</strong></font>
                   <br>
                   <a href="https://arxiv.org/abs/2108.08258">[arXiv]</a>
@@ -191,7 +417,7 @@
                   <a href="https://github.com/xy-guo/LIGA-Stereo">[code]</a>
                 </td>
               </tr>
-              <!-- Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2019 - Group-wise Correlation Stereo Network -->
+              <!-- Conference on Computer Vision and Pattern Recognition, 2019 - Group-wise Correlation Stereo Network -->
               <tr onmouseout="gwcnet_stop()" onmouseover="gwcnet_start()" >
                 <td style="padding:10px;width:25%;vertical-align:middle">
                   <div class="one" style="margin:auto">
@@ -221,12 +447,12 @@
                   </a>
                   <br>
                   <strong>Xiaoyang Guo</strong>,
-                  Kai Yang,
+                  <a href="https://scholar.google.com/citations?user=s5Z6X0cAAAAJ&hl=en">Kai Yang</a>,
                   Wukui Yang,
-                  Xiaogang Wang,
-                  Hongsheng Li,
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>,
+                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>
                   <br>
-                  <em>Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)</em>, 2019 &nbsp
+                  <em>Conference on Computer Vision and Pattern Recognition, <strong>CVPR'19</strong></em> &nbsp
                   <br>
                   <a href="https://arxiv.org/abs/1903.04025">[arXiv]</a>
                   <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Guo_Group-Wise_Correlation_Stereo_Network_CVPR_2019_paper.html">[paper]</a>
@@ -264,18 +490,18 @@
                   <br>
                   <strong>Xiaoyang Guo*</strong>,
                   Mingyang Liang*,
-                  Hongsheng Li,
-                  Xiaogang Wang,
-                  You Song,
+                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>,
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>,
+                  You Song
                   <br>
-                  <em>AAAI</em>, 2019 &nbsp
+                  <em>AAAI, <strong>AAAI'19</strong></em> &nbsp
                   <font color="red"><strong>(Oral Presentation)</strong></font>
                   <br>
                   <a href="https://arxiv.org/abs/1903.01078">[arXiv]</a>
                   <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4894">[paper]</a>
                 </td>
               </tr>
-              <!-- European Conference on Computer Vision (<b>ECCV</b>), 2018 - Learning Monocular Depth by Distilling Cross-domain Stereo Networks -->
+              <!-- European Conference on Computer Vision, 2018 - Learning Monocular Depth by Distilling Cross-domain Stereo Networks -->
               <tr onmouseout="distillmono_stop()" onmouseover="distillmono_start()" >
                 <td style="padding:10px;width:25%;vertical-align:middle">
                   <div class="one" style="margin:auto">
@@ -305,12 +531,12 @@
                   </a>
                   <br>
                   <strong>Xiaoyang Guo</strong>,
-                  Hongsheng Li,
-                  Shuai Yi,
-                  Jimmy Ren,
-                  Xiaogang Wang,
+                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>,
+                  <a href="https://scholar.google.com/citations?user=afbbNmwAAAAJ&hl=zh-CN">Shuai Yi</a>,
+                  <a href="http://www.jimmyren.com/">Jimmy Ren</a>,
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>
                   <br>
-                  <em>European Conference on Computer Vision (<b>ECCV</b>)</em>, 2018 &nbsp
+                  <em>European Conference on Computer Vision, <strong>ECCV'18</strong></em> &nbsp
                   <br>
                   <a href="https://arxiv.org/abs/1808.06586">[arXiv]</a>
                   <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Xiaoyang_Guo_Learning_Monocular_Depth_ECCV_2018_paper.html">[paper]</a>
@@ -318,7 +544,7 @@
                   <a href="https://github.com/xy-guo/Learning-Monocular-Depth-by-Stereo">[code]</a>
                 </td>
               </tr>
-              <!-- European Conference on Computer Vision (<b>ECCV</b>), 2018 - Neural Network Encapsulation -->
+              <!-- European Conference on Computer Vision, 2018 - Neural Network Encapsulation -->
               <tr onmouseout="encap_stop()" onmouseover="encap_start()" >
                 <td style="padding:10px;width:25%;vertical-align:middle">
                   <div class="one" style="margin:auto">
@@ -347,13 +573,13 @@
                     </span>
                   </a>
                   <br>
-                  Hongyang Li,
+                  <a href="https://lihongyang.info/">Hongyang Li</a>,
                   <strong>Xiaoyang Guo</strong>,
-                  Bo Dai,
-                  Wanli Ouyang,
-                  Xiaogang Wang,
+                  <a href="https://daibo.info/">Bo Dai</a>,
+                  <a href="https://wlouyang.github.io/">Wanli Ouyang</a>,
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>
                   <br>
-                  <em>European Conference on Computer Vision (<b>ECCV</b>)</em>, 2018 &nbsp
+                  <em>European Conference on Computer Vision, <strong>ECCV'18</strong></em> &nbsp
                   <br>
                   <a href="https://arxiv.org/abs/1808.03749">[arXiv]</a>
                   <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Hongyang_Li_Neural_Network_Encapsulation_ECCV_2018_paper.html">[paper]</a>
