@@ -9,6 +9,7 @@ name = 'Xiaoyang Guo'
 
 author_links = {
     "Xiaoyang Guo": "https://xy-guo.github.io/",
+    "Yubin Hu": "https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en",
     "Shaoshuai Shi": "https://shishaoshuai.com/",
     "Hongsheng Li": "https://www.ee.cuhk.edu.hk/~hsli/",
     "Xiaogang Wang": "https://www.ee.cuhk.edu.hk/~xgwang/",
@@ -17,7 +18,22 @@ author_links = {
     "Bo Dai": "https://daibo.info/",
     "Wanli Ouyang": "https://wlouyang.github.io/",
     "Shuai Yi": "https://scholar.google.com/citations?user=afbbNmwAAAAJ&hl=zh-CN",
-    "Jimmy Ren": "http://www.jimmyren.com/"
+    "Jimmy Ren": "http://www.jimmyren.com/",
+    "Jingwei Huang": "https://stanford.edu/~jingweih/",
+    "Yong-Jin Liu": "https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm",
+    "Hengshuang Zhao": "https://i.cs.hku.hk/~hszhao/",
+    "Lihe Yang": "https://liheyoung.github.io/",
+    "Xingang Pan": "https://xingangpan.github.io/",
+    "Wei Yin": "https://yvanyin.xyz/",
+    "Li Yi": "https://ericyi.github.io/",
+    "Zheng Zhang": "https://zhengzhang01.github.io/",
+    "Kaiwen Zhang": "https://kevin-thu.github.io/homepage/",
+    "Yuan Liu": "https://liuyuan-pal.github.io/",
+    "Xiaoxiao Long": "https://www.xxlong.site/",
+    "Xiao-Xiao Long": "https://www.xxlong.site/",
+    "Xinggang Wang": "https://xwcv.github.io/",
+    "Bencheng Liao": "https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=zh-CN",
+    "Shaoyu Chen": "https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=en",
 }
 
 
@@ -98,6 +114,22 @@ def get_papers():
         image="./images/rad.png",
     ))
     papers.append(Paper(
+        tag="synthdrive",
+        title="SynthDrive: Scalable Real2Sim2Real Sensor Simulation Pipeline for High-Fidelity Asset Generation and Driving Data Synthesis",
+        short_title="SynthDrive",
+        conference="International Conference on Intelligent Robots and Systems",
+        conference_short="IROS'25",
+        year=2025,
+        authors=gen_author_list("ZhengQing Chen", "Ruohong Mei", "Xiaoyang Guo†", "Qingjie Wang", "Yubin Hu", "Wei Yin", "Weiqiang Ren", "Qian Zhang"),
+        url="",
+        url_paper="./papers/iros25_synthdrive.pdf",
+        url_arxiv="",
+        url_project_page="",
+        image="./images/synthdrive.png",
+        video_after="./images/synthdrive.mp4",
+        url_video="https://www.youtube.com/watch?v=WM4dR1b3uAQ",
+    ))
+    papers.append(Paper(
         tag="calib",
         title="Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration",
         short_title="DM-Calib",
@@ -108,7 +140,7 @@ def get_papers():
         url="https://arxiv.org/pdf/2411.17240",
         url_arxiv="https://arxiv.org/pdf/2411.17240",
         url_code="https://github.com/JunyuanDeng/DM-Calib",
-        image="./images/dm_calib.png",
+        image="./images/dm-calib.png",
     ))
     papers.append(Paper(
         tag="epona",
@@ -134,6 +166,7 @@ def get_papers():
         authors=gen_author_list("Zheng Zhang, Lihe Yang, Tianyu Yang, Chaohui Yu, Xiaoyang Guo, Yixing Lao, Hengshuang Zhao"),
         url="",
         url_arxiv="",
+        special_honor="Spotlight",
         image="./images/stabledepth.png",
     ))
     papers.append(Paper(
@@ -141,7 +174,7 @@ def get_papers():
         title="NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis",
         short_title="NGP-RT",
         conference="European Conference on Computer Vision",
-        conference_short="ECCV'25",
+        conference_short="ECCV'24",
         year=2025,
         authors=gen_author_list("Yubin Hu*", "Xiaoyang Guo*", "Yang Xiao", "Jingwei Huang", "Yong-Jin Liu"),
         url="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_9",
@@ -163,7 +196,8 @@ def get_papers():
         url_arxiv="https://arxiv.org/abs/2410.21739",
         url_project_page="https://github.com/THU-LYJ-Lab/SS3DM-Exporter",
         url_dataset="https://huggingface.co/datasets/SS3DM/SS3DM-Dataset/tree/main",
-        image="./images/ss3dm.png",
+        image="./images/ss3dm-after.png",
+        image_after="./images/ss3dm.png",
     ))
     papers.append(Paper(
         tag="arrangement",
@@ -175,6 +209,7 @@ def get_papers():
         authors=gen_author_list("Jingwei Huang", "Shanshan Zhang", "Bo Duan", "Xiaoyang Guo", "Minwei Sun", "Li Yi"),
         url="https://dl.acm.org/doi/10.1145/3592122",
         image="./images/arrangementnet.png",
+        video_after="./images/arrangementnet.mp4",
         url_arxiv="",
         url_paper="https://dl.acm.org/doi/10.1145/3592122",
         special_honor="Journal Track"
@@ -195,6 +230,7 @@ def get_papers():
         url_code="https://github.com/xy-guo/LIGA-Stereo",
         url_project_page="/liga",
         image="./images/liga.png",
+        image_after="./images/liga-det.png",
         special_honor="Ranked 1st place among stereo-based 3D detection methods on KITTI (July 2021), refer to <a href=\"https://www.cvlibs.net/datasets/kitti/eval_object_detail.php?&result=d5d1938b704537150df7f8403d173aa16fe9ba17\">here</a>.",
         abstract="Stereo-based 3D detection aims at detecting 3D object bounding boxes from stereo images using intermediate depth maps or implicit 3D geometry representations, which provides a low-cost solution for 3D perception. However, its performance is still inferior compared with LiDAR-based detection algorithms. To detect and localize accurate 3D bounding boxes, LiDAR-based models can encode accurate object boundaries and surface normal directions from LiDAR point clouds. However, the detection results of stereo-based detectors are easily affected by the erroneous depth features due to the limitation of stereo matching. To solve the problem, we propose LIGA-Stereo (LiDAR Geometry Aware Stereo Detector) to learn stereo-based 3D detectors under the guidance of high-level geometry-aware representations of LiDAR-based detection models. In addition, we found existing voxel-based stereo detectors failed to learn semantic features effectively from indirect 3D supervisions. We attach an auxiliary 2D detection head to provide direct 2D semantic supervisions. Experiment results show that the above two strategies improved the geometric and semantic representation capabilities. Compared with the state-of-the-art stereo detector, our method has improved the 3D detection performance of cars, pedestrians, cyclists by <strong>10.44%, 5.69%, 5.97%</strong> mAP respectively on the official KITTI benchmark. ",
         affiliation="CUHK-SenseTime Joint Laboratory, The Chinese University of Hong Kong",
