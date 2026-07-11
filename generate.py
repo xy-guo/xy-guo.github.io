@@ -478,7 +478,7 @@ def get_news():
     return [
         dict(date="2026.06", text='One paper accepted to <strong>ICML 2026</strong> (EPS3D). SCOPE released on arXiv.'),
         dict(date="2026.04", text='Four papers accepted to <strong>CVPR 2026</strong>: Scal3R (<strong>Highlight</strong>), LongStream, LiteVGGT, and VGGT4D.'),
-        dict(date="2026.03", text='CompoSIA accepted to <strong>ECCV 2026</strong>. Started working on world models and embodied foundation models.'),
+        dict(date="2026.03", text='CompoSIA accepted to <strong>ECCV 2026</strong>. Started working on embodied foundation models.'),
         dict(date="2026.02", text='SAIL-Recon accepted as an <strong>Oral</strong> at <strong>3DV 2026</strong>.'),
         dict(date="2025.10", text='Three papers at <strong>ICCV 2025</strong> (Epona, DM-Calib, StableDepth <strong>Highlight</strong>); RAD at <strong>NeurIPS 2025</strong>; SynthDrive and ComDrive at <strong>IROS 2025</strong>.'),
     ]
