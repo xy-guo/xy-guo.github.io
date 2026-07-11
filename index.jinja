@@ -7,6 +7,7 @@
   <title>Xiaoyang Guo</title>
 
   <meta name="author" content="Xiaoyang Guo">
+  <meta name="description" content="Xiaoyang Guo — research on 3D reconstruction, Gaussian Splatting, VGGT, and world models.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -29,8 +30,9 @@
                     Xiaoyang Guo (郭晓阳)
                   </p>
                   <p>
-                    I am currently a Principal Researcher at Horizon Robotics, where I lead a team dedicated to
-                    3D reconstruction, generation, and simulation for autonomous driving systems.
+                    I work on world models and embodied foundation models that unify understanding, simulation, and action.
+                    Previously, I was a Principal Researcher at Horizon Robotics (2023–2026), where I led work on
+                    3D reconstruction, digital twins, and interactive driving simulation.
                     I received my Ph.D. from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Laboratory (MMLab)</a> at <a
                       href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>,
                     where I was fortunate to be advised by <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and <a
@@ -39,15 +41,17 @@
                       href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
                   </p>
                   <p>
-                    My research interests lie at the intersection of 3D computer vision and generative AI, with a particular focus on large-scale 3D reconstruction, neural rendering, and scene generation.
+                    My research interests include large-scale 3D scene understanding (multi-view reconstruction, Gaussian Splatting, and VGGT),
+                    high-precision 3D reconstruction and digital twins for autonomous driving,
+                    and world models for embodied intelligence.
                   </p>
                   <p>
-                    I am actively seeking highly motivated interns to collaborate on projects involving neural rendering, video generation, and 3D foundation models. If you're interested, feel free to reach out via email.
+                    I am actively seeking highly motivated interns to collaborate on projects involving
+                    world models, 3D foundation models, and generative simulation. If you're interested, feel free to reach out via email.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a> &nbsp;/&nbsp;
                     <a href="/files/cv.pdf">CV</a> &nbsp;/&nbsp;
-                    <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp; -->
                     <a href="https://scholar.google.com/citations?hl=en&user=CrK4w4UAAAAJ">Scholar</a> &nbsp;/&nbsp;
                     <a href="https://github.com/xy-guo">Github</a>
                   </p>
@@ -61,17 +65,47 @@
             </tbody>
           </table>
 
+          <!-- news -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:2.5%;padding-top:0;padding-bottom:0;">
+                  <h2>News</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:2.5%;padding-top:8px;">
+                  <ul style="margin:0;padding-left:18px;">
+                    {% for item in news %}
+                    <li style="margin-bottom:4px;"><strong>{{ item.date }}</strong>: {{ item.text }}</li>
+                    {% endfor %}
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <!-- papers -->
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+              <tr>
+                <td style="padding:2.5%;padding-bottom:0;" colspan="2">
+                  <h2>Selected Publications</h2>
+                  <p style="margin:6px 0 0 0;color:#666;font-size:13px;">
+                    <strong>*</strong> equal contribution; <strong>†</strong> project lead.
+                    Full list on <a href="https://scholar.google.com/citations?hl=en&user=CrK4w4UAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>.
+                  </p>
+                </td>
+              </tr>
               {% for paper in papers %}
               <!-- {{paper.conference}}, {{paper.year}} - {{paper.title}} -->
               <tr style="padding: 20px; margin: 10px; min-height: 100px" {% if paper.yellow_highlight %}
                 bgcolor="#ffffd0" {% endif %}>
                 <td onmouseout="{{paper.tag}}_stop()" onmouseover="{{paper.tag}}_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="{{paper.tag}}_hover"">
+                    <div class="two" id="{{paper.tag}}_hover">
                       {% if paper.image_after is not none %}
                       <img src='{{paper.image_after}}' width=100%>
                       {% elif paper.video_after is not none %}
@@ -86,7 +120,6 @@
                     </div>
                   </div>
 
-                  <!-- {% if paper.video_after is not none or paper.image_after is not none %} -->
                   <script type="text/javascript">
                     function {{ paper.tag }}_start() {
                       document.getElementById('{{paper.tag}}_hover').style.opacity = "1";
@@ -99,7 +132,6 @@
                     }
                     {{ paper.tag }}_stop()
                   </script>
-                  <!-- {% endif %} -->
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -111,12 +143,12 @@
                   {% for author in paper.authors %}
                   {% if not author.name.startswith(name) %}
                   {% if author.url is not none %}
-                  <a href="{{author.url}}">{{author.name}}</a>{% if not loop.last %},{% endif %}
+                  <a href="{{author.url}}">{{author.name}}</a>{% if not loop.last %}, {% endif %}
                   {% else %}
-                  {{author.name}}{% if not loop.last %},{% endif %}
+                  {{author.name}}{% if not loop.last %}, {% endif %}
                   {% endif %}
                   {% else %}
-                  <strong>{{author.name}}</strong>,
+                  <strong>{{author.name}}</strong>{% if not loop.last %}, {% endif %}
                   {% endif %}
                   {% endfor %}
                   <br>
@@ -159,51 +191,12 @@
                   {% endif %}
 
                   {% if paper.description is not none %}
-                  <p><font color="gray"">{{paper.description}}</font></p>
+                  <p><font color="gray">{{paper.description}}</font></p>
                   {% endif %}
                   </div>
                 </td>
               </tr>
               {% endfor %}
-
-            </tbody>
-          </table>
-
-
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-              <tr>
-                <td>
-                  <!-- <h2>Miscellanea</h2> -->
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table width="100%" align="center" border="0" cellpadding="20">
-            <tbody>
-
-              <tr>
-                <!-- <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td> -->
-                <td width="75%" valign="center">
-                  <a href=""></a>
-                </td>
-              </tr>
-
-              <!-- <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/cs188.jpg" alt="cs188">
-                </td>
-                <td width="75%" valign="center">
-                  <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor,
-                    </a>
-                  <br>
-                  <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor,
-                    CS188 Fall 2010</a>
-                  <br>
-                  <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd
-                    Edition</a>
-                </td>
-              </tr> -->
 
             </tbody>
           </table>

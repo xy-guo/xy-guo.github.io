@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Xiaoyang Guo</title>
   <meta name="author" content="Xiaoyang Guo">
+  <meta name="description" content="Xiaoyang Guo — research on 3D reconstruction, Gaussian Splatting, VGGT, and world models.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -24,8 +25,9 @@
                     Xiaoyang Guo (郭晓阳)
                   </p>
                   <p>
-                    I am currently a Principal Researcher at Horizon Robotics, where I lead a team dedicated to
-                    3D reconstruction, generation, and simulation for autonomous driving systems.
+                    I work on world models and embodied foundation models that unify understanding, simulation, and action.
+                    Previously, I was a Principal Researcher at Horizon Robotics (2023–2026), where I led work on
+                    3D reconstruction, digital twins, and interactive driving simulation.
                     I received my Ph.D. from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Laboratory (MMLab)</a> at <a
                       href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>,
                     where I was fortunate to be advised by <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and <a
@@ -34,15 +36,17 @@
                       href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
                   </p>
                   <p>
-                    My research interests lie at the intersection of 3D computer vision and generative AI, with a particular focus on large-scale 3D reconstruction, neural rendering, and scene generation.
+                    My research interests include large-scale 3D scene understanding (multi-view reconstruction, Gaussian Splatting, and VGGT),
+                    high-precision 3D reconstruction and digital twins for autonomous driving,
+                    and world models for embodied intelligence.
                   </p>
                   <p>
-                    I am actively seeking highly motivated interns to collaborate on projects involving neural rendering, video generation, and 3D foundation models. If you're interested, feel free to reach out via email.
+                    I am actively seeking highly motivated interns to collaborate on projects involving
+                    world models, 3D foundation models, and generative simulation. If you're interested, feel free to reach out via email.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a> &nbsp;/&nbsp;
                     <a href="/files/cv.pdf">CV</a> &nbsp;/&nbsp;
-                    <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp; -->
                     <a href="https://scholar.google.com/citations?hl=en&user=CrK4w4UAAAAJ">Scholar</a> &nbsp;/&nbsp;
                     <a href="https://github.com/xy-guo">Github</a>
                   </p>
@@ -55,48 +59,463 @@
               </tr>
             </tbody>
           </table>
+          <!-- news -->
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:2.5%;padding-top:0;padding-bottom:0;">
+                  <h2>News</h2>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:2.5%;padding-top:8px;">
+                  <ul style="margin:0;padding-left:18px;">
+                    <li style="margin-bottom:4px;"><strong>2026.06</strong>: One paper accepted to <strong>ICML 2026</strong> (EPS3D). SCOPE released on arXiv.</li>
+                    <li style="margin-bottom:4px;"><strong>2026.04</strong>: Four papers accepted to <strong>CVPR 2026</strong>: Scal3R (<strong>Highlight</strong>), LongStream, LiteVGGT, and VGGT4D.</li>
+                    <li style="margin-bottom:4px;"><strong>2026.03</strong>: CompoSIA accepted to <strong>ECCV 2026</strong>. Started working on world models and embodied foundation models.</li>
+                    <li style="margin-bottom:4px;"><strong>2026.02</strong>: SAIL-Recon accepted as an <strong>Oral</strong> at <strong>3DV 2026</strong>.</li>
+                    <li style="margin-bottom:4px;"><strong>2025.10</strong>: Three papers at <strong>ICCV 2025</strong> (Epona, DM-Calib, StableDepth <strong>Highlight</strong>); RAD at <strong>NeurIPS 2025</strong>; SynthDrive and ComDrive at <strong>IROS 2025</strong>.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <!-- papers -->
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
-              <!-- Preprint, 2025 - Rad: Training an End-to-end Driving Policy via Large-scale 3dgs-based Reinforcement Learning -->
+              <tr>
+                <td style="padding:2.5%;padding-bottom:0;" colspan="2">
+                  <h2>Selected Publications</h2>
+                  <p style="margin:6px 0 0 0;color:#666;font-size:13px;">
+                    <strong>*</strong> equal contribution; <strong>†</strong> project lead.
+                    Full list on <a href="https://scholar.google.com/citations?hl=en&user=CrK4w4UAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>.
+                  </p>
+                </td>
+              </tr>
+              <!-- Preprint, 2026 - SCOPE: Scale-Consistent One-Pass Estimation of 3D Geometry -->
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
-                <td onmouseout="rad_stop()" onmouseover="rad_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                <td onmouseout="scope_stop()" onmouseover="scope_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="rad_hover"">
+                    <div class="two" id="scope_hover">
                     </div>
-                    <div id="rad_default">
-                      <img src='./images/rad.png' width=100%>
+                    <div id="scope_default">
+                      <img src='./images/scope.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function scope_start() {
+                      document.getElementById('scope_hover').style.opacity = "1";
+                      document.getElementById('scope_default').style.opacity = "0";
+                    }
+                    function scope_stop() {
+                      document.getElementById('scope_hover').style.opacity = "0";
+                      document.getElementById('scope_default').style.opacity = "1";
+                    }
+                    scope_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
-                  <a href="https://arxiv.org/abs/2502.13144">
-                    <span class="papertitle">Rad: Training an End-to-end Driving Policy via Large-scale 3dgs-based Reinforcement Learning
+                  <a href="https://arxiv.org/abs/2606.21300">
+                    <span class="papertitle">SCOPE: Scale-Consistent One-Pass Estimation of 3D Geometry
                     </span>
                   </a>
                   <br>
-                  Hao Gao,
-                  <a href="https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=en">Shaoyu Chen</a>,
-                  Bo Jiang,
-                  <a href="https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=zh-CN">Bencheng Liao</a>,
-                  Yiang Shi,
-                  <strong>Xiaoyang Guo</strong>,
-                  Yuechuan Pu,
-                  Haoran Yin,
-                  Xiangyu Li,
-                  Xinbang Zhang,
-                  Ying Zhang,
-                  Wenyu Liu,
-                  Qian Zhang,
-                  <a href="https://xwcv.github.io/">Xinggang Wang</a>
+                  <a href="https://zhengzhang01.github.io/">Zheng Zhang</a>, 
+                  <a href="https://liheyoung.github.io/">Lihe Yang</a>, 
+                  Tianyu Yang, 
+                  Chaohui Yu, 
+                  Yixing Lao, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Biao Gong, 
+                  Fan Wang, 
+                  <a href="https://i.cs.hku.hk/~hszhao/">Hengshuang Zhao</a>
                   <br>
-                  <em>Preprint, <strong>Arxiv'25</strong></em> &nbsp
+                  <em>Preprint, <strong>Arxiv'26</strong></em> &nbsp
                   <br>
-                  <a href="https://arxiv.org/abs/2502.13144">[arXiv]</a>
-                  <a href="https://hgao-cv.github.io/RAD/">[project page]</a>
+                  <a href="https://arxiv.org/abs/2606.21300">[arXiv]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- International Conference on Machine Learning, 2026 - EPS3D: End-to-End Feed-Forward 3D Panoptic Segmentation -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="eps3d_stop()" onmouseover="eps3d_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="eps3d_hover">
+                    </div>
+                    <div id="eps3d_default">
+                      <img src='./images/eps3d.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function eps3d_start() {
+                      document.getElementById('eps3d_hover').style.opacity = "1";
+                      document.getElementById('eps3d_default').style.opacity = "0";
+                    }
+                    function eps3d_stop() {
+                      document.getElementById('eps3d_hover').style.opacity = "0";
+                      document.getElementById('eps3d_default').style.opacity = "1";
+                    }
+                    eps3d_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2606.08980">
+                    <span class="papertitle">EPS3D: End-to-End Feed-Forward 3D Panoptic Segmentation
+                    </span>
+                  </a>
+                  <br>
+                  Runsong Zhu, 
+                  Jiaxin Guo, 
+                  <strong>Xiaoyang Guo<sup>†</sup></strong>, 
+                  Zhengzhe Liu, 
+                  Ka-Hei Hui, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Kai Chen, 
+                  Wei Chen, 
+                  Weiqiang Ren, 
+                  Yunhui Liu, 
+                  <a href="https://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a>, 
+                  <a href="https://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a>
+                  <br>
+                  <em>International Conference on Machine Learning, <strong>ICML'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2606.08980">[arXiv]</a>
+                  <a href="https://github.com/Runsong123/EPS3D">[code]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Preprint, 2026 - HorizonStream: Long-Horizon Attention for Streaming 3D Reconstruction -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="horizonstream_stop()" onmouseover="horizonstream_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="horizonstream_hover">
+                    </div>
+                    <div id="horizonstream_default">
+                      <img src='./images/horizonstream.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function horizonstream_start() {
+                      document.getElementById('horizonstream_hover').style.opacity = "1";
+                      document.getElementById('horizonstream_default').style.opacity = "0";
+                    }
+                    function horizonstream_stop() {
+                      document.getElementById('horizonstream_hover').style.opacity = "0";
+                      document.getElementById('horizonstream_default').style.opacity = "1";
+                    }
+                    horizonstream_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2605.23889">
+                    <span class="papertitle">HorizonStream: Long-Horizon Attention for Streaming 3D Reconstruction
+                    </span>
+                  </a>
+                  <br>
+                  Chong Cheng, 
+                  Peilin Tao, 
+                  Nanjie Yao, 
+                  Guanzhi Ding, 
+                  Xianda Chen, 
+                  Yuansen Du, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Weiqiang Ren, 
+                  Qian Zhang, 
+                  Zhengqing Chen, 
+                  <a href="https://scholar.google.com/citations?user=pVWBU7YAAAAJ">Hao Wang</a>
+                  <br>
+                  <em>Preprint, <strong>Arxiv'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2605.23889">[arXiv]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Preprint, 2026 - HorizonDrive: Self-Corrective Autoregressive World Model for Long-horizon Driving Simulation -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="horizondrive_stop()" onmouseover="horizondrive_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="horizondrive_hover">
+                    </div>
+                    <div id="horizondrive_default">
+                      <img src='./images/horizondrive.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function horizondrive_start() {
+                      document.getElementById('horizondrive_hover').style.opacity = "1";
+                      document.getElementById('horizondrive_default').style.opacity = "0";
+                    }
+                    function horizondrive_stop() {
+                      document.getElementById('horizondrive_hover').style.opacity = "0";
+                      document.getElementById('horizondrive_default').style.opacity = "1";
+                    }
+                    horizondrive_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2605.11596">
+                    <span class="papertitle">HorizonDrive: Self-Corrective Autoregressive World Model for Long-horizon Driving Simulation
+                    </span>
+                  </a>
+                  <br>
+                  Conglang Zhang, 
+                  <a href="https://yifever20002.github.io/">Yifan Zhan</a>, 
+                  Qingjie Wang, 
+                  Zhanpeng Ouyang, 
+                  Yu Li, 
+                  Zihao Yang, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Weiqiang Ren, 
+                  Qian Zhang, 
+                  Zhen Dong, 
+                  <a href="https://scholar.google.com/citations?user=qMrRe2wAAAAJ">Yinqiang Zheng</a>, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Zhengqing Chen
+                  <br>
+                  <em>Preprint, <strong>Arxiv'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2605.11596">[arXiv]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- European Conference on Computer Vision, 2026 - Composing Driving Worlds through Disentangled Control for Adversarial Scenario Generation -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="composia_stop()" onmouseover="composia_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="composia_hover">
+                    </div>
+                    <div id="composia_default">
+                      <img src='./images/composia.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function composia_start() {
+                      document.getElementById('composia_hover').style.opacity = "1";
+                      document.getElementById('composia_default').style.opacity = "0";
+                    }
+                    function composia_stop() {
+                      document.getElementById('composia_hover').style.opacity = "0";
+                      document.getElementById('composia_default').style.opacity = "1";
+                    }
+                    composia_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2603.12864">
+                    <span class="papertitle">Composing Driving Worlds through Disentangled Control for Adversarial Scenario Generation
+                    </span>
+                  </a>
+                  <br>
+                  <a href="https://yifever20002.github.io/">Yifan Zhan</a>, 
+                  Zhengqing Chen, 
+                  Qingjie Wang, 
+                  Zhuo He, 
+                  Muyao Niu, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Weiqiang Ren, 
+                  Qian Zhang, 
+                  <a href="https://scholar.google.com/citations?user=qMrRe2wAAAAJ">Yinqiang Zheng</a>
+                  <br>
+                  <em>European Conference on Computer Vision, <strong>ECCV'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2603.12864">[arXiv]</a>
+                  <a href="https://yifever20002.github.io/CompoSIA/">[project page]</a>
+                  <a href="https://github.com/Yifever20002/CompoSIA">[code]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Conference on Computer Vision and Pattern Recognition, 2026 - Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="scal3r_stop()" onmouseover="scal3r_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="scal3r_hover">
+                    </div>
+                    <div id="scal3r_default">
+                      <img src='./images/scal3r.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function scal3r_start() {
+                      document.getElementById('scal3r_hover').style.opacity = "1";
+                      document.getElementById('scal3r_default').style.opacity = "0";
+                    }
+                    function scal3r_stop() {
+                      document.getElementById('scal3r_hover').style.opacity = "0";
+                      document.getElementById('scal3r_default').style.opacity = "1";
+                    }
+                    scal3r_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2604.08542">
+                    <span class="papertitle">Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction
+                    </span>
+                  </a>
+                  <br>
+                  Tao Xie, 
+                  Peishan Yang, 
+                  Yudong Jin, 
+                  Yingfeng Cai, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Weiqiang Ren, 
+                  Qian Zhang, 
+                  Wei Hua, 
+                  <a href="https://pengsida.net/">Sida Peng</a>, 
+                  <strong>Xiaoyang Guo<sup>†</sup></strong>, 
+                  <a href="https://xzhou.me/">Xiaowei Zhou<sup>†</sup></a>
+                  <br>
+                  <em>Conference on Computer Vision and Pattern Recognition, <strong>CVPR'26</strong></em> &nbsp
+                  <font color="red"><strong>(Highlight)</strong></font>
+                  <br>
+                  <a href="https://arxiv.org/abs/2604.08542">[arXiv]</a>
+                  <a href="https://zju3dv.github.io/scal3r/">[project page]</a>
+                  <a href="https://github.com/zju3dv/Scal3R">[code]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Conference on Computer Vision and Pattern Recognition, 2026 - LongStream: Long-Sequence Streaming Autoregressive Visual Geometry -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="longstream_stop()" onmouseover="longstream_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="longstream_hover">
+                    </div>
+                    <div id="longstream_default">
+                      <img src='./images/longstream.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function longstream_start() {
+                      document.getElementById('longstream_hover').style.opacity = "1";
+                      document.getElementById('longstream_default').style.opacity = "0";
+                    }
+                    function longstream_stop() {
+                      document.getElementById('longstream_hover').style.opacity = "0";
+                      document.getElementById('longstream_default').style.opacity = "1";
+                    }
+                    longstream_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2602.13172">
+                    <span class="papertitle">LongStream: Long-Sequence Streaming Autoregressive Visual Geometry
+                    </span>
+                  </a>
+                  <br>
+                  Chong Cheng, 
+                  Xianda Chen, 
+                  Tao Xie, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Weiqiang Ren, 
+                  Qian Zhang, 
+                  <strong>Xiaoyang Guo<sup>†</sup></strong>, 
+                  <a href="https://scholar.google.com/citations?user=pVWBU7YAAAAJ">Hao Wang</a>
+                  <br>
+                  <em>Conference on Computer Vision and Pattern Recognition, <strong>CVPR'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2602.13172">[arXiv]</a>
+                  <a href="https://3dagentworld.github.io/longstream/">[project page]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Conference on Computer Vision and Pattern Recognition, 2026 - LiteVGGT: Boosting Vanilla VGGT via Geometry-Aware Cached Token Merging -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="litevggt_stop()" onmouseover="litevggt_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="litevggt_hover">
+                    </div>
+                    <div id="litevggt_default">
+                      <img src='./images/litevggt.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function litevggt_start() {
+                      document.getElementById('litevggt_hover').style.opacity = "1";
+                      document.getElementById('litevggt_default').style.opacity = "0";
+                    }
+                    function litevggt_stop() {
+                      document.getElementById('litevggt_hover').style.opacity = "0";
+                      document.getElementById('litevggt_default').style.opacity = "1";
+                    }
+                    litevggt_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2512.04939">
+                    <span class="papertitle">LiteVGGT: Boosting Vanilla VGGT via Geometry-Aware Cached Token Merging
+                    </span>
+                  </a>
+                  <br>
+                  Zhijian Shu, 
+                  Cheng Lin, 
+                  Tao Xie, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Ben Li, 
+                  Zhiyuan Pu, 
+                  Weize Li, 
+                  <a href="https://yanyt.github.io/">Yao Yao</a>, 
+                  <a href="https://cite.nju.edu.cn/People/Full_time_Faculty/20190621/i5054.html">Xun Cao</a>, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://www.xxlong.site/">Xiao-Xiao Long</a>
+                  <br>
+                  <em>Conference on Computer Vision and Pattern Recognition, <strong>CVPR'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2512.04939">[arXiv]</a>
+                  <a href="https://garlicba.github.io/LiteVGGT/">[project page]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Conference on Computer Vision and Pattern Recognition, 2026 - VGGT4D: Mining Motion Cues in Visual Geometry Transformers for 4D Scene Reconstruction -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="vggt4d_stop()" onmouseover="vggt4d_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="vggt4d_hover">
+                    </div>
+                    <div id="vggt4d_default">
+                      <img src='./images/vggt4d.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function vggt4d_start() {
+                      document.getElementById('vggt4d_hover').style.opacity = "1";
+                      document.getElementById('vggt4d_default').style.opacity = "0";
+                    }
+                    function vggt4d_stop() {
+                      document.getElementById('vggt4d_hover').style.opacity = "0";
+                      document.getElementById('vggt4d_default').style.opacity = "1";
+                    }
+                    vggt4d_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2511.19971">
+                    <span class="papertitle">VGGT4D: Mining Motion Cues in Visual Geometry Transformers for 4D Scene Reconstruction
+                    </span>
+                  </a>
+                  <br>
+                  Yu Hu<sup>*</sup>, 
+                  Chong Cheng<sup>*</sup>, 
+                  Sicheng Yu<sup>*</sup>, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://scholar.google.com/citations?user=pVWBU7YAAAAJ">Hao Wang</a>
+                  <br>
+                  <em>Conference on Computer Vision and Pattern Recognition, <strong>CVPR'26</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2511.19971">[arXiv]</a>
+                  <a href="https://3dagentworld.github.io/vggt4d/">[project page]</a>
+                  <a href="https://github.com/3DAgentWorld/VGGT4D">[code]</a>
                   </div>
                 </td>
               </tr>
@@ -104,17 +523,12 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="synthdrive_stop()" onmouseover="synthdrive_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="synthdrive_hover"">
-                      <video width=100% height=100% muted autoplay loop>
-                        <source src="./images/synthdrive.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
+                    <div class="two" id="synthdrive_hover">
                     </div>
                     <div id="synthdrive_default">
                       <img src='./images/synthdrive.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
                   <script type="text/javascript">
                     function synthdrive_start() {
                       document.getElementById('synthdrive_hover').style.opacity = "1";
@@ -126,65 +540,171 @@
                     }
                     synthdrive_stop()
                   </script>
-                  <!--  -->
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
-                  <a href="">
+                  <a href="./files/iros25_synthdrive.pdf">
                     <span class="papertitle">SynthDrive: Scalable Real2Sim2Real Sensor Simulation Pipeline for High-Fidelity Asset Generation and Driving Data Synthesis
                     </span>
                   </a>
                   <br>
-                  ZhengQing Chen,
-                  Ruohong Mei,
-                  <strong>Xiaoyang Guo<sup>†</sup></strong>,
-                  Qingjie Wang,
-                  <a href="https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en">Yubin Hu</a>,
-                  <a href="https://yvanyin.xyz/">Wei Yin</a>,
-                  Weiqiang Ren,
+                  Zhengqing Chen, 
+                  Ruohong Mei, 
+                  <strong>Xiaoyang Guo<sup>†</sup></strong>, 
+                  Qingjie Wang, 
+                  <a href="https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en">Yubin Hu</a>, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Weiqiang Ren, 
                   Qian Zhang
                   <br>
                   <em>International Conference on Intelligent Robots and Systems, <strong>IROS'25</strong></em> &nbsp
                   <br>
-                  <a href="">[arXiv]</a>
-                  <a href="">[project page]</a>
-                  <a href="./papers/iros25_synthdrive.pdf">[paper]</a>
+                  <a href="./files/iros25_synthdrive.pdf">[paper]</a>
                   <a href="https://www.youtube.com/watch?v=WM4dR1b3uAQ">[video]</a>
                   </div>
                 </td>
               </tr>
-              <!-- International Conference on Computer Vision, 2025 - Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration -->
+              <!-- International Conference on Intelligent Robots and Systems, 2025 - ComDrive: Comfort-Oriented End-to-End Autonomous Driving -->
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
-                <td onmouseout="calib_stop()" onmouseover="calib_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                <td onmouseout="comdrive_stop()" onmouseover="comdrive_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="calib_hover"">
+                    <div class="two" id="comdrive_hover">
                     </div>
-                    <div id="calib_default">
-                      <img src='./images/dm-calib.png' width=100%>
+                    <div id="comdrive_default">
+                      <img src='./images/comdrive.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function comdrive_start() {
+                      document.getElementById('comdrive_hover').style.opacity = "1";
+                      document.getElementById('comdrive_default').style.opacity = "0";
+                    }
+                    function comdrive_stop() {
+                      document.getElementById('comdrive_hover').style.opacity = "0";
+                      document.getElementById('comdrive_default').style.opacity = "1";
+                    }
+                    comdrive_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
-                  <a href="https://arxiv.org/pdf/2411.17240">
-                    <span class="papertitle">Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration
+                  <a href="https://arxiv.org/abs/2410.05051">
+                    <span class="papertitle">ComDrive: Comfort-Oriented End-to-End Autonomous Driving
                     </span>
                   </a>
                   <br>
-                  Junyuan Deng,
-                  <a href="https://yvanyin.xyz/">Wei Yin</a>,
-                  <strong>Xiaoyang Guo<sup>‡</sup></strong>,
-                  Qian Zhang,
-                  Xiaotao Hu,
-                  Weiqiang Ren,
-                  <a href="https://www.xxlong.site/">Xiao-Xiao Long</a>,
-                  Ping Tan<sup>†</sup>
+                  Junming Wang, 
+                  Xingyu Zhang, 
+                  Zebin Xing, 
+                  Songen Gu, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Yang Hu, 
+                  Ziying Song, 
+                  Qian Zhang, 
+                  <a href="https://www.xxlong.site/">Xiaoxiao Long</a>, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>
                   <br>
-                  <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
+                  <em>International Conference on Intelligent Robots and Systems, <strong>IROS'25</strong></em> &nbsp
                   <br>
-                  <a href="https://arxiv.org/pdf/2411.17240">[arXiv]</a>
-                  <a href="https://github.com/JunyuanDeng/DM-Calib">[code]</a>
+                  <a href="https://arxiv.org/abs/2410.05051">[arXiv]</a>
+                  <a href="https://jmwang0117.github.io/ComDrive/">[project page]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- International Conference on 3D Vision, 2026 - SAIL-Recon: Large SfM by Augmenting Scene Regression with Localization -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="sailrecon_stop()" onmouseover="sailrecon_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="sailrecon_hover">
+                    </div>
+                    <div id="sailrecon_default">
+                      <img src='./images/sailrecon.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function sailrecon_start() {
+                      document.getElementById('sailrecon_hover').style.opacity = "1";
+                      document.getElementById('sailrecon_default').style.opacity = "0";
+                    }
+                    function sailrecon_stop() {
+                      document.getElementById('sailrecon_hover').style.opacity = "0";
+                      document.getElementById('sailrecon_default').style.opacity = "1";
+                    }
+                    sailrecon_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2508.17972">
+                    <span class="papertitle">SAIL-Recon: Large SfM by Augmenting Scene Regression with Localization
+                    </span>
+                  </a>
+                  <br>
+                  Junyuan Deng, 
+                  Heng Li, 
+                  Tao Xie, 
+                  Weiqiang Ren, 
+                  Qian Zhang, 
+                  <a href="https://facultyprofiles.hkust.edu.hk/profiles.php?profile=ping-tan-pingtan">Ping Tan</a>, 
+                  <strong>Xiaoyang Guo<sup>†</sup></strong>
+                  <br>
+                  <em>International Conference on 3D Vision, <strong>3DV'26</strong></em> &nbsp
+                  <font color="red"><strong>(Oral)</strong></font>
+                  <br>
+                  <a href="https://arxiv.org/abs/2508.17972">[arXiv]</a>
+                  <a href="https://hkust-sail.github.io/sail-recon/">[project page]</a>
+                  <a href="https://github.com/HKUST-SAIL/sail-recon">[code]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Advances in Neural Information Processing Systems, 2025 - RAD: Training an End-to-End Driving Policy via Large-Scale 3DGS-Based Reinforcement Learning -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="rad_stop()" onmouseover="rad_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="rad_hover">
+                    </div>
+                    <div id="rad_default">
+                      <img src='./images/rad.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function rad_start() {
+                      document.getElementById('rad_hover').style.opacity = "1";
+                      document.getElementById('rad_default').style.opacity = "0";
+                    }
+                    function rad_stop() {
+                      document.getElementById('rad_hover').style.opacity = "0";
+                      document.getElementById('rad_default').style.opacity = "1";
+                    }
+                    rad_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2502.13144">
+                    <span class="papertitle">RAD: Training an End-to-End Driving Policy via Large-Scale 3DGS-Based Reinforcement Learning
+                    </span>
+                  </a>
+                  <br>
+                  <a href="https://hgao-cv.github.io/">Hao Gao</a>, 
+                  <a href="https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=en">Shaoyu Chen</a>, 
+                  Bo Jiang, 
+                  <a href="https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=zh-CN">Bencheng Liao</a>, 
+                  Yiang Shi, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Yuechuan Pu, 
+                  Haoran Yin, 
+                  Xiangyu Li, 
+                  Xinbang Zhang, 
+                  Ying Zhang, 
+                  Wenyu Liu, 
+                  Qian Zhang, 
+                  <a href="https://xwcv.github.io/">Xinggang Wang</a>
+                  <br>
+                  <em>Advances in Neural Information Processing Systems, <strong>NeurIPS'25</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2502.13144">[arXiv]</a>
+                  <a href="https://hgao-cv.github.io/RAD/">[project page]</a>
                   </div>
                 </td>
               </tr>
@@ -192,13 +712,23 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="epona_stop()" onmouseover="epona_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="epona_hover"">
+                    <div class="two" id="epona_hover">
                     </div>
                     <div id="epona_default">
                       <img src='./images/epona.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function epona_start() {
+                      document.getElementById('epona_hover').style.opacity = "1";
+                      document.getElementById('epona_default').style.opacity = "0";
+                    }
+                    function epona_stop() {
+                      document.getElementById('epona_hover').style.opacity = "0";
+                      document.getElementById('epona_default').style.opacity = "1";
+                    }
+                    epona_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -207,17 +737,17 @@
                     </span>
                   </a>
                   <br>
-                  <a href="https://kevin-thu.github.io/homepage/">Kaiwen Zhang</a>,
-                  Zhenyu Tang,
-                  Xiaotao Hu,
-                  <a href="https://xingangpan.github.io/">Xingang Pan</a>,
-                  <strong>Xiaoyang Guo</strong>,
-                  <a href="https://liuyuan-pal.github.io/">Yuan Liu</a>,
-                  <a href="https://stanford.edu/~jingweih/">Jingwei Huang</a>,
-                  Li Yuan,
-                  Qian Zhang,
-                  <a href="https://www.xxlong.site/">Xiaoxiao Long</a>,
-                  Xun Cao,
+                  <a href="https://kevin-thu.github.io/homepage/">Kaiwen Zhang</a>, 
+                  Zhenyu Tang, 
+                  Xiaotao Hu, 
+                  <a href="https://xingangpan.github.io/">Xingang Pan</a>, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://liuyuan-pal.github.io/">Yuan Liu</a>, 
+                  <a href="https://stanford.edu/~jingweih/">Jingwei Huang</a>, 
+                  Li Yuan, 
+                  Qian Zhang, 
+                  <a href="https://www.xxlong.site/">Xiaoxiao Long</a>, 
+                  <a href="https://cite.nju.edu.cn/People/Full_time_Faculty/20190621/i5054.html">Xun Cao</a>, 
                   <a href="https://yvanyin.xyz/">Wei Yin</a>
                   <br>
                   <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
@@ -228,45 +758,145 @@
                   </div>
                 </td>
               </tr>
+              <!-- International Conference on Computer Vision, 2025 - Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="calib_stop()" onmouseover="calib_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="calib_hover">
+                    </div>
+                    <div id="calib_default">
+                      <img src='./images/dm-calib.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function calib_start() {
+                      document.getElementById('calib_hover').style.opacity = "1";
+                      document.getElementById('calib_default').style.opacity = "0";
+                    }
+                    function calib_stop() {
+                      document.getElementById('calib_hover').style.opacity = "0";
+                      document.getElementById('calib_default').style.opacity = "1";
+                    }
+                    calib_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/pdf/2411.17240">
+                    <span class="papertitle">Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration
+                    </span>
+                  </a>
+                  <br>
+                  Junyuan Deng, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  <strong>Xiaoyang Guo<sup>†</sup></strong>, 
+                  Qian Zhang, 
+                  Xiaotao Hu, 
+                  Weiqiang Ren, 
+                  <a href="https://www.xxlong.site/">Xiao-Xiao Long</a>, 
+                  <a href="https://facultyprofiles.hkust.edu.hk/profiles.php?profile=ping-tan-pingtan">Ping Tan</a>
+                  <br>
+                  <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2411.17240">[arXiv]</a>
+                  <a href="https://github.com/JunyuanDeng/DM-Calib">[code]</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- Preprint, 2024 - DrivingWorld: Constructing World Model for Autonomous Driving via Video GPT -->
+              <tr style="padding: 20px; margin: 10px; min-height: 100px" >
+                <td onmouseout="drivingworld_stop()" onmouseover="drivingworld_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
+                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <div class="two" id="drivingworld_hover">
+                    </div>
+                    <div id="drivingworld_default">
+                      <img src='./images/drivingworld.png' width=100%>
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function drivingworld_start() {
+                      document.getElementById('drivingworld_hover').style.opacity = "1";
+                      document.getElementById('drivingworld_default').style.opacity = "0";
+                    }
+                    function drivingworld_stop() {
+                      document.getElementById('drivingworld_hover').style.opacity = "0";
+                      document.getElementById('drivingworld_default').style.opacity = "1";
+                    }
+                    drivingworld_stop()
+                  </script>
+                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle;">
+                  <div>
+                  <a href="https://arxiv.org/abs/2412.19505">
+                    <span class="papertitle">DrivingWorld: Constructing World Model for Autonomous Driving via Video GPT
+                    </span>
+                  </a>
+                  <br>
+                  Xiaotao Hu, 
+                  <a href="https://yvanyin.xyz/">Wei Yin</a>, 
+                  Mingkai Jia, 
+                  Junyuan Deng, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Qian Zhang, 
+                  <a href="https://www.xxlong.site/">Xiaoxiao Long</a>, 
+                  <a href="https://facultyprofiles.hkust.edu.hk/profiles.php?profile=ping-tan-pingtan">Ping Tan</a>
+                  <br>
+                  <em>Preprint, <strong>Arxiv'24</strong></em> &nbsp
+                  <br>
+                  <a href="https://arxiv.org/abs/2412.19505">[arXiv]</a>
+                  </div>
+                </td>
+              </tr>
               <!-- International Conference on Computer Vision, 2025 - StableDepth: Scene-Consistent and Scale-Invariant Monocular Depth -->
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="stabledepth_stop()" onmouseover="stabledepth_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="stabledepth_hover"">
+                    <div class="two" id="stabledepth_hover">
                     </div>
                     <div id="stabledepth_default">
                       <img src='./images/stabledepth.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function stabledepth_start() {
+                      document.getElementById('stabledepth_hover').style.opacity = "1";
+                      document.getElementById('stabledepth_default').style.opacity = "0";
+                    }
+                    function stabledepth_stop() {
+                      document.getElementById('stabledepth_hover').style.opacity = "0";
+                      document.getElementById('stabledepth_default').style.opacity = "1";
+                    }
+                    stabledepth_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
-                  <a href="">
+                  <a href="https://stabledepth.github.io/">
                     <span class="papertitle">StableDepth: Scene-Consistent and Scale-Invariant Monocular Depth
                     </span>
                   </a>
                   <br>
-                  <a href="https://zhengzhang01.github.io/">Zheng Zhang</a>,
-                  <a href="https://liheyoung.github.io/">Lihe Yang</a>,
-                  Tianyu Yang,
-                  Chaohui Yu,
-                  <strong>Xiaoyang Guo</strong>,
-                  Yixing Lao,
+                  <a href="https://zhengzhang01.github.io/">Zheng Zhang</a>, 
+                  <a href="https://liheyoung.github.io/">Lihe Yang</a>, 
+                  Tianyu Yang, 
+                  Chaohui Yu, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Yixing Lao, 
                   <a href="https://i.cs.hku.hk/~hszhao/">Hengshuang Zhao</a>
                   <br>
                   <em>International Conference on Computer Vision, <strong>ICCV'25</strong></em> &nbsp
-                  <font color="red"><strong>(Spotlight)</strong></font>
+                  <font color="red"><strong>(Highlight)</strong></font>
                   <br>
-                  <a href="">[arXiv]</a>
+                  <a href="https://stabledepth.github.io/">[project page]</a>
+                  <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_StableDepth_Scene-Consistent_and_Scale-Invariant_Monocular_Depth_ICCV_2025_paper.html">[paper]</a>
                   </div>
                 </td>
               </tr>
-              <!-- European Conference on Computer Vision, 2025 - NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis -->
+              <!-- European Conference on Computer Vision, 2024 - NGP-RT: Fusing Multi-Level Hash Features with Lightweight Attention for Real-Time Novel View Synthesis -->
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="ngprt_stop()" onmouseover="ngprt_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="ngprt_hover"">
+                    <div class="two" id="ngprt_hover">
                       <video width=100% height=100% muted autoplay loop>
                         <source src="./images/ngp_rt_shitang.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -276,7 +906,6 @@
                       <img src='./images/ngprt.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
                   <script type="text/javascript">
                     function ngprt_start() {
                       document.getElementById('ngprt_hover').style.opacity = "1";
@@ -288,7 +917,6 @@
                     }
                     ngprt_stop()
                   </script>
-                  <!--  -->
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -297,10 +925,10 @@
                     </span>
                   </a>
                   <br>
-                  <a href="https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en">Yubin Hu*</a>,
-                  <strong>Xiaoyang Guo*</strong>,
-                  Yang Xiao,
-                  <a href="https://stanford.edu/~jingweih/">Jingwei Huang</a>,
+                  <a href="https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en">Yubin Hu<sup>*</sup></a>, 
+                  <strong>Xiaoyang Guo<sup>*</sup></strong>, 
+                  Yang Xiao, 
+                  <a href="https://stanford.edu/~jingweih/">Jingwei Huang</a>, 
                   <a href="https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm">Yong-Jin Liu</a>
                   <br>
                   <em>European Conference on Computer Vision, <strong>ECCV'24</strong></em> &nbsp
@@ -311,18 +939,17 @@
                   </div>
                 </td>
               </tr>
-              <!-- Advances in Neural Information Processing Systems, 2024 - SS3DM: Self-Supervised 3D Reconstruction from Monocular Videos -->
+              <!-- Advances in Neural Information Processing Systems, 2024 - SS3DM: Benchmarking Street-View Surface Reconstruction with a Synthetic 3D Mesh Dataset -->
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="ss3dm_stop()" onmouseover="ss3dm_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="ss3dm_hover"">
+                    <div class="two" id="ss3dm_hover">
                       <img src='./images/ss3dm.png' width=100%>
                     </div>
                     <div id="ss3dm_default">
                       <img src='./images/ss3dm-after.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
                   <script type="text/javascript">
                     function ss3dm_start() {
                       document.getElementById('ss3dm_hover').style.opacity = "1";
@@ -334,19 +961,18 @@
                     }
                     ss3dm_stop()
                   </script>
-                  <!--  -->
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
                   <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/c11767cd469b8d8bd7f168e61b3cc8bc-Abstract-Datasets_and_Benchmarks_Track.html">
-                    <span class="papertitle">SS3DM: Self-Supervised 3D Reconstruction from Monocular Videos
+                    <span class="papertitle">SS3DM: Benchmarking Street-View Surface Reconstruction with a Synthetic 3D Mesh Dataset
                     </span>
                   </a>
                   <br>
-                  <a href="https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en">Yubin Hu</a>,
-                  Kairui Wen,
-                  Heng Zhou,
-                  <strong>Xiaoyang Guo</strong>,
+                  <a href="https://scholar.google.com/citations?user=swN2J1QAAAAJ&hl=en">Yubin Hu</a>, 
+                  Kairui Wen, 
+                  Heng Zhou, 
+                  <strong>Xiaoyang Guo</strong>, 
                   <a href="https://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm">Yong-Jin Liu</a>
                   <br>
                   <em>Advances in Neural Information Processing Systems, <strong>NeurIPS'24 (DB Track)</strong></em> &nbsp
@@ -361,7 +987,7 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="arrangement_stop()" onmouseover="arrangement_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="arrangement_hover"">
+                    <div class="two" id="arrangement_hover">
                       <video width=100% height=100% muted autoplay loop>
                         <source src="./images/arrangementnet.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -371,7 +997,6 @@
                       <img src='./images/arrangementnet.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
                   <script type="text/javascript">
                     function arrangement_start() {
                       document.getElementById('arrangement_hover').style.opacity = "1";
@@ -383,7 +1008,6 @@
                     }
                     arrangement_stop()
                   </script>
-                  <!--  -->
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -392,17 +1016,16 @@
                     </span>
                   </a>
                   <br>
-                  <a href="https://stanford.edu/~jingweih/">Jingwei Huang</a>,
-                  Shanshan Zhang,
-                  Bo Duan,
-                  <strong>Xiaoyang Guo</strong>,
-                  Minwei Sun,
+                  <a href="https://stanford.edu/~jingweih/">Jingwei Huang</a>, 
+                  Shanshan Zhang, 
+                  Bo Duan, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  Minwei Sun, 
                   <a href="https://ericyi.github.io/">Li Yi</a>
                   <br>
                   <em>ACM Transactions on Graphics (TOG) , <strong>TOG'23</strong></em> &nbsp
                   <font color="red"><strong>(Journal Track)</strong></font>
                   <br>
-                  <a href="">[arXiv]</a>
                   <a href="https://dl.acm.org/doi/10.1145/3592122">[paper]</a>
                   </div>
                 </td>
@@ -411,14 +1034,13 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="liga_stop()" onmouseover="liga_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="liga_hover"">
+                    <div class="two" id="liga_hover">
                       <img src='./images/liga-det.png' width=100%>
                     </div>
                     <div id="liga_default">
                       <img src='./images/liga.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
                   <script type="text/javascript">
                     function liga_start() {
                       document.getElementById('liga_hover').style.opacity = "1";
@@ -430,7 +1052,6 @@
                     }
                     liga_stop()
                   </script>
-                  <!--  -->
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -439,9 +1060,9 @@
                     </span>
                   </a>
                   <br>
-                  <strong>Xiaoyang Guo</strong>,
-                  <a href="https://shishaoshuai.com/">Shaoshuai Shi</a>,
-                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>,
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://shishaoshuai.com/">Shaoshuai Shi</a>, 
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>, 
                   <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>
                   <br>
                   <em>International Conference on Computer Vision), <strong>ICCV'21</strong></em> &nbsp
@@ -458,13 +1079,23 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="gwcnet_stop()" onmouseover="gwcnet_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="gwcnet_hover"">
+                    <div class="two" id="gwcnet_hover">
                     </div>
                     <div id="gwcnet_default">
                       <img src='./images/gwcnet.jpg' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function gwcnet_start() {
+                      document.getElementById('gwcnet_hover').style.opacity = "1";
+                      document.getElementById('gwcnet_default').style.opacity = "0";
+                    }
+                    function gwcnet_stop() {
+                      document.getElementById('gwcnet_hover').style.opacity = "0";
+                      document.getElementById('gwcnet_default').style.opacity = "1";
+                    }
+                    gwcnet_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -473,10 +1104,10 @@
                     </span>
                   </a>
                   <br>
-                  <strong>Xiaoyang Guo</strong>,
-                  <a href="https://scholar.google.com/citations?user=s5Z6X0cAAAAJ&hl=en">Kai Yang</a>,
-                  Wukui Yang,
-                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>,
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://scholar.google.com/citations?user=s5Z6X0cAAAAJ&hl=en">Kai Yang</a>, 
+                  Wukui Yang, 
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>, 
                   <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>
                   <br>
                   <em>Conference on Computer Vision and Pattern Recognition, <strong>CVPR'19</strong></em> &nbsp
@@ -491,13 +1122,23 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="unsupstereo_stop()" onmouseover="unsupstereo_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="unsupstereo_hover"">
+                    <div class="two" id="unsupstereo_hover">
                     </div>
                     <div id="unsupstereo_default">
                       <img src='./images/cs-stereo.jpg' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function unsupstereo_start() {
+                      document.getElementById('unsupstereo_hover').style.opacity = "1";
+                      document.getElementById('unsupstereo_default').style.opacity = "0";
+                    }
+                    function unsupstereo_stop() {
+                      document.getElementById('unsupstereo_hover').style.opacity = "0";
+                      document.getElementById('unsupstereo_default').style.opacity = "1";
+                    }
+                    unsupstereo_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -506,10 +1147,10 @@
                     </span>
                   </a>
                   <br>
-                  <strong>Xiaoyang Guo*</strong>,
-                  Mingyang Liang*,
-                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>,
-                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>,
+                  <strong>Xiaoyang Guo<sup>*</sup></strong>, 
+                  Mingyang Liang<sup>*</sup>, 
+                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>, 
+                  <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>, 
                   You Song
                   <br>
                   <em>AAAI, <strong>AAAI'19</strong></em> &nbsp
@@ -524,13 +1165,23 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="distillmono_stop()" onmouseover="distillmono_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="distillmono_hover"">
+                    <div class="two" id="distillmono_hover">
                     </div>
                     <div id="distillmono_default">
                       <img src='./images/mono.jpg' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function distillmono_start() {
+                      document.getElementById('distillmono_hover').style.opacity = "1";
+                      document.getElementById('distillmono_default').style.opacity = "0";
+                    }
+                    function distillmono_stop() {
+                      document.getElementById('distillmono_hover').style.opacity = "0";
+                      document.getElementById('distillmono_default').style.opacity = "1";
+                    }
+                    distillmono_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -539,10 +1190,10 @@
                     </span>
                   </a>
                   <br>
-                  <strong>Xiaoyang Guo</strong>,
-                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>,
-                  <a href="https://scholar.google.com/citations?user=afbbNmwAAAAJ&hl=zh-CN">Shuai Yi</a>,
-                  <a href="http://www.jimmyren.com/">Jimmy Ren</a>,
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>, 
+                  <a href="https://scholar.google.com/citations?user=afbbNmwAAAAJ&hl=zh-CN">Shuai Yi</a>, 
+                  <a href="http://www.jimmyren.com/">Jimmy Ren</a>, 
                   <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>
                   <br>
                   <em>European Conference on Computer Vision, <strong>ECCV'18</strong></em> &nbsp
@@ -558,13 +1209,23 @@
               <tr style="padding: 20px; margin: 10px; min-height: 100px" >
                 <td onmouseout="encap_stop()" onmouseover="encap_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
                   <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="encap_hover"">
+                    <div class="two" id="encap_hover">
                     </div>
                     <div id="encap_default">
                       <img src='./images/encap.png' width=100%>
                     </div>
                   </div>
-                  <!--  -->
+                  <script type="text/javascript">
+                    function encap_start() {
+                      document.getElementById('encap_hover').style.opacity = "1";
+                      document.getElementById('encap_default').style.opacity = "0";
+                    }
+                    function encap_stop() {
+                      document.getElementById('encap_hover').style.opacity = "0";
+                      document.getElementById('encap_default').style.opacity = "1";
+                    }
+                    encap_stop()
+                  </script>
                 </td>
                 <td style="padding:10px;width:75%;vertical-align:middle;">
                   <div>
@@ -573,10 +1234,10 @@
                     </span>
                   </a>
                   <br>
-                  <a href="https://lihongyang.info/">Hongyang Li</a>,
-                  <strong>Xiaoyang Guo</strong>,
-                  <a href="https://daibo.info/">Bo Dai</a>,
-                  <a href="https://wlouyang.github.io/">Wanli Ouyang</a>,
+                  <a href="https://lihongyang.info/">Hongyang Li</a>, 
+                  <strong>Xiaoyang Guo</strong>, 
+                  <a href="https://daibo.info/">Bo Dai</a>, 
+                  <a href="https://wlouyang.github.io/">Wanli Ouyang</a>, 
                   <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>
                   <br>
                   <em>European Conference on Computer Vision, <strong>ECCV'18</strong></em> &nbsp
@@ -586,40 +1247,6 @@
                   </div>
                 </td>
               </tr>
-            </tbody>
-          </table>
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-              <tr>
-                <td>
-                  <!-- <h2>Miscellanea</h2> -->
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table width="100%" align="center" border="0" cellpadding="20">
-            <tbody>
-              <tr>
-                <!-- <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td> -->
-                <td width="75%" valign="center">
-                  <a href=""></a>
-                </td>
-              </tr>
-              <!-- <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/cs188.jpg" alt="cs188">
-                </td>
-                <td width="75%" valign="center">
-                  <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor,
-                    </a>
-                  <br>
-                  <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor,
-                    CS188 Fall 2010</a>
-                  <br>
-                  <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd
-                    Edition</a>
-                </td>
-              </tr> -->
             </tbody>
           </table>
           <!-- footer -->
