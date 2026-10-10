@@ -113,6 +113,33 @@ def gen_author_list(*author_names):
 def get_papers():
     papers = []
     papers.append(Paper(
+        tag="ironmind",
+        title="IronMind: Scaling Humanoid Dexterous Manipulation via Camera-Space Ego-Centric Pretraining",
+        short_title="IronMind",
+        conference="XPENG Technical Report",
+        conference_short="Arxiv'26",
+        year=2026,
+        authors=gen_author_list("Huimin Pan, Yufan Ren, Kunpeng Song, Siyang Wang, Xiwen Zhang, Xiaoyun Hu, Zhuoxu Duan, Hanrui Zheng, Jialeng Ni, Nathan Zhao, Sibo Ma, Zhenxuan Fan, Zhongyang Che, Danny Bao, Jiacheng Wei, Jerry Bai, Xiaoyu Yue, Xiaoyang Guo, Chenyi Chen"),
+        url="https://xpeng-robotics.github.io/ironmind/",
+        url_arxiv="https://arxiv.org/abs/2609.39403",
+        url_project_page="https://xpeng-robotics.github.io/ironmind/",
+        image="./images/ironmind.jpg",
+    ))
+    papers.append(Paper(
+        tag="xpace",
+        title="XPACE: Joint World and Action Modeling from Heterogeneous Experience",
+        short_title="XPACE",
+        conference="XPENG Technical Report",
+        conference_short="Arxiv'26",
+        year=2026,
+        authors=gen_author_list("Jiacheng Wei<sup>*§</sup>, Jerry Bai<sup>*§</sup>, Xiaoyu Yue*, Zidong Wang*, Xiaoyang Guo<sup>*†</sup>, Cheng Chen, Fanqi Pu, Fan Wu, Zhixu Yue, Yizhuo Li, Feng Qiu, Bo Liu, Yuying Ge, Hui Zhou, Chenyi Chen, Yixiao Ge‡"),
+        url="https://xpeng-robotics.github.io/xpace/",
+        url_arxiv="https://arxiv.org/abs/2609.17372",
+        url_project_page="https://xpeng-robotics.github.io/xpace/",
+        image="./images/xpace.png",
+        description="For XPACE: <sup>*</sup> core contribution; <sup>§</sup> equal contribution; <sup>†</sup> project lead; <sup>‡</sup> supervision.",
+    ))
+    papers.append(Paper(
         tag="scope",
         title="SCOPE: Scale-Consistent One-Pass Estimation of 3D Geometry",
         short_title="SCOPE",
@@ -136,6 +163,18 @@ def get_papers():
         url_arxiv="https://arxiv.org/abs/2606.08980",
         url_code="https://github.com/Runsong123/EPS3D",
         image="./images/eps3d.png",
+    ))
+    papers.append(Paper(
+        tag="anchor3r",
+        title="Anchor3R: Streaming 3D Reconstruction with Transient Anchors for Long-Horizon Visual Mapping",
+        short_title="Anchor3R",
+        conference="Preprint",
+        conference_short="Arxiv'26",
+        year=2026,
+        authors=gen_author_list("Peilin Tao, Chong Cheng, Yuansen Du, Caiwei Song, Zhengqing Chen, Xiaoyang Guo, Wei Yin, Weiqiang Ren, Qian Zhang, Hainan Cui, Shuhan Shen"),
+        url="https://arxiv.org/abs/2606.05035",
+        url_arxiv="https://arxiv.org/abs/2606.05035",
+        image="./images/anchor3r.png",
     ))
     papers.append(Paper(
         tag="horizonstream",
@@ -174,6 +213,7 @@ def get_papers():
         url_project_page="https://yifever20002.github.io/CompoSIA/",
         url_code="https://github.com/Yifever20002/CompoSIA",
         image="./images/composia.png",
+        video_after="./images/hover/composia.mp4",
     ))
     papers.append(Paper(
         tag="scal3r",
@@ -188,6 +228,7 @@ def get_papers():
         url_project_page="https://zju3dv.github.io/scal3r/",
         url_code="https://github.com/zju3dv/Scal3R",
         image="./images/scal3r.png",
+        image_after="./images/hover/scal3r.gif",
         special_honor="Highlight",
     ))
     papers.append(Paper(
@@ -202,6 +243,7 @@ def get_papers():
         url_arxiv="https://arxiv.org/abs/2602.13172",
         url_project_page="https://3dagentworld.github.io/longstream/",
         image="./images/longstream.png",
+        video_after="./images/hover/longstream.mp4",
     ))
     papers.append(Paper(
         tag="litevggt",
@@ -215,6 +257,7 @@ def get_papers():
         url_arxiv="https://arxiv.org/abs/2512.04939",
         url_project_page="https://garlicba.github.io/LiteVGGT/",
         image="./images/litevggt.png",
+        video_after="./images/hover/litevggt.mp4",
     ))
     papers.append(Paper(
         tag="vggt4d",
@@ -229,6 +272,7 @@ def get_papers():
         url_project_page="https://3dagentworld.github.io/vggt4d/",
         url_code="https://github.com/3DAgentWorld/VGGT4D",
         image="./images/vggt4d.png",
+        video_after="./images/hover/vggt4d.mp4",
     ))
     papers.append(Paper(
         tag="synthdrive",
@@ -256,6 +300,7 @@ def get_papers():
         url_arxiv="https://arxiv.org/abs/2410.05051",
         url_project_page="https://jmwang0117.github.io/ComDrive/",
         image="./images/comdrive.png",
+        video_after="./images/hover/comdrive.mp4",
     ))
     papers.append(Paper(
         tag="sailrecon",
@@ -270,6 +315,7 @@ def get_papers():
         url_project_page="https://hkust-sail.github.io/sail-recon/",
         url_code="https://github.com/HKUST-SAIL/sail-recon",
         image="./images/sailrecon.png",
+        image_after="./images/hover/sailrecon.png",
         special_honor="Oral",
     ))
     papers.append(Paper(
@@ -284,6 +330,7 @@ def get_papers():
         url_arxiv="https://arxiv.org/abs/2502.13144",
         url_project_page="https://hgao-cv.github.io/RAD/",
         image="./images/rad.png",
+        video_after="./images/hover/rad.mp4",
     ))
     papers.append(Paper(
         tag="epona",
@@ -298,6 +345,7 @@ def get_papers():
         url_project_page="https://kevin-thu.github.io/Epona/",
         url_code="https://kevin-thu.github.io/Epona/",
         image="./images/epona.png",
+        video_after="./images/hover/epona.mp4",
     ))
     papers.append(Paper(
         tag="calib",
@@ -338,6 +386,7 @@ def get_papers():
         url_paper="https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_StableDepth_Scene-Consistent_and_Scale-Invariant_Monocular_Depth_ICCV_2025_paper.html",
         special_honor="Highlight",
         image="./images/stabledepth.png",
+        video_after="./images/hover/stabledepth.mp4",
     ))
     papers.append(Paper(
         tag="ngprt",
@@ -476,6 +525,7 @@ def get_papers():
 
 def get_news():
     return [
+        dict(date="2026.09", text='Released <a href="https://xpeng-robotics.github.io/xpace/">XPACE</a> and <a href="https://xpeng-robotics.github.io/ironmind/">IronMind</a>, two technical reports on embodied world models and humanoid manipulation.'),
         dict(date="2026.06", text='One paper accepted to <strong>ICML 2026</strong> (EPS3D). SCOPE released on arXiv.'),
         dict(date="2026.04", text='Four papers accepted to <strong>CVPR 2026</strong>: Scal3R (<strong>Highlight</strong>), LongStream, LiteVGGT, and VGGT4D.'),
         dict(date="2026.03", text='CompoSIA accepted to <strong>ECCV 2026</strong>. Started working on embodied foundation models.'),

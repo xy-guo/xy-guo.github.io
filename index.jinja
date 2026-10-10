@@ -10,7 +10,7 @@
   <meta name="description" content="Xiaoyang Guo — research on embodied foundation models, 3D reconstruction, Gaussian Splatting, and VGGT.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261011d">
 
 </head>
 
@@ -21,7 +21,7 @@
       <tr style="padding:0px;">
         <td style="padding:0px;">
           <!-- profile -->
-          <table
+          <table class="profile"
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr style="padding:0px">
@@ -30,26 +30,21 @@
                     Xiaoyang Guo (郭晓阳)
                   </p>
                   <p>
-                    I work on embodied foundation models that unify understanding, simulation, and action.
-                    Previously, I was a Principal Researcher at Horizon Robotics, where I led work on
-                    3D reconstruction, digital twins, and interactive driving simulation.
-                    I received my Ph.D. from <a href="http://mmlab.ie.cuhk.edu.hk/">the Multimedia Laboratory (MMLab)</a> at <a
-                      href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>,
-                    where I was fortunate to be advised by <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and <a
-                      href="https://www.ee.cuhk.edu.hk/~hsli/">Prof. Hongsheng Li</a>.
-                    Prior to that, I obtained my Bachelor's degree in Computer Science from <a
-                      href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
+                    I work on embodied foundation models, with a focus on world modeling, robot learning, and 3D perception.
                   </p>
                   <p>
-                    My research interests include large-scale 3D scene understanding (multi-view reconstruction, Gaussian Splatting, and VGGT),
-                    high-precision 3D reconstruction and digital twins for autonomous driving,
-                    and embodied foundation models.
+                    Previously, I was a Principal Researcher at Horizon Robotics, leading research on
+                    3D reconstruction and interactive driving simulation. I received my Ph.D. from
+                    <a href="http://mmlab.ie.cuhk.edu.hk/">CUHK MMLab</a>, advised by
+                    <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Prof. Xiaogang Wang</a> and
+                    <a href="https://www.ee.cuhk.edu.hk/~hsli/">Prof. Hongsheng Li</a>, and my B.S. in Computer Science from
+                    <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>.
                   </p>
                   <p>
-                    I am actively seeking highly motivated interns to collaborate on projects involving
-                    embodied foundation models, 3D foundation models, and generative simulation. If you're interested, feel free to reach out via email.
+                    I am looking for research interns interested in embodied AI, 3D foundation models,
+                    and generative simulation. Please reach out by <a href="mailto:xiaoyang.guo1995@gmail.com">email</a>.
                   </p>
-                  <p style="text-align:center">
+                  <p class="profile-links" style="text-align:center">
                     <a href="mailto:xiaoyang.guo1995@gmail.com">Email</a> &nbsp;/&nbsp;
                     <a href="/files/cv.pdf">CV</a> &nbsp;/&nbsp;
                     <a href="https://scholar.google.com/citations?hl=en&user=CrK4w4UAAAAJ">Scholar</a> &nbsp;/&nbsp;
@@ -66,7 +61,7 @@
           </table>
 
           <!-- news -->
-          <table
+          <table class="news"
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
@@ -87,8 +82,9 @@
           </table>
 
           <!-- papers -->
-          <table
+          <table class="publications"
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <colgroup><col style="width:25%"><col style="width:75%"></colgroup>
             <tbody>
               <tr>
                 <td style="padding:2.5%;padding-bottom:0;" colspan="2">
@@ -101,45 +97,28 @@
               </tr>
               {% for paper in papers %}
               <!-- {{paper.conference}}, {{paper.year}} - {{paper.title}} -->
-              <tr style="padding: 20px; margin: 10px; min-height: 100px" {% if paper.yellow_highlight %}
-                bgcolor="#ffffd0" {% endif %}>
-                <td onmouseout="{{paper.tag}}_stop()" onmouseover="{{paper.tag}}_start()" style="padding:5px;height:150px; width:25%;vertical-align:middle;">
-                  <div class="one" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                    <div class="two" id="{{paper.tag}}_hover">
-                      {% if paper.image_after is not none %}
-                      <img src='{{paper.image_after}}' width=100%>
-                      {% elif paper.video_after is not none %}
-                      <video width=100% height=100% muted autoplay loop>
-                        <source src="{{paper.video_after}}" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                      {% endif %}
-                    </div>
-                    <div id="{{paper.tag}}_default">
-                      <img src='{{paper.image}}' width=100%>
-                    </div>
+              <tr class="paper-row" {% if paper.yellow_highlight %}bgcolor="#ffffd0"{% endif %}>
+                <td class="paper-media">
+                  {% set has_hover = paper.image_after is not none or paper.video_after is not none %}
+                  <div class="paper-thumbnail{% if has_hover %} has-hover{% endif %}">
+                    <img class="paper-cover" src="{{paper.image}}" alt="{{paper.short_title or paper.title}} research overview" loading="lazy" decoding="async">
+                    {% if paper.image_after is not none %}
+                    <img class="paper-hover" src="{{paper.image_after}}" alt="" loading="lazy" decoding="async">
+                    {% elif paper.video_after is not none %}
+                    <video class="paper-hover" muted autoplay loop playsinline preload="none" aria-hidden="true">
+                      <source src="{{paper.video_after}}" type="video/mp4">
+                    </video>
+                    {% endif %}
                   </div>
-
-                  <script type="text/javascript">
-                    function {{ paper.tag }}_start() {
-                      document.getElementById('{{paper.tag}}_hover').style.opacity = "1";
-                      document.getElementById('{{paper.tag}}_default').style.opacity = "0";
-                    }
-
-                    function {{ paper.tag }}_stop() {
-                      document.getElementById('{{paper.tag}}_hover').style.opacity = "0";
-                      document.getElementById('{{paper.tag}}_default').style.opacity = "1";
-                    }
-                    {{ paper.tag }}_stop()
-                  </script>
                 </td>
-                <td style="padding:10px;width:75%;vertical-align:middle;">
+                <td class="paper-details">
                   <div>
                   <a href="{{paper.url}}">
                     <span class="papertitle">{{paper.title}}
                     </span>
                   </a>
                   <br>
+                  <span class="paper-authors">
                   {% for author in paper.authors %}
                   {% if not author.name.startswith(name) %}
                   {% if author.url is not none %}
@@ -151,8 +130,9 @@
                   <strong>{{author.name}}</strong>{% if not loop.last %}, {% endif %}
                   {% endif %}
                   {% endfor %}
+                  </span>
                   <br>
-                  <em>{{paper.conference}}, <strong>{{paper.conference_short}}</strong></em> &nbsp
+                  <em class="paper-venue">{{paper.conference}}, <strong>{{paper.conference_short}}</strong></em> &nbsp
                   {% if paper.special_honor is not none %}
                   <font color="red"><strong>({{paper.special_honor}})</strong></font>
                   {% endif %}
@@ -191,7 +171,7 @@
                   {% endif %}
 
                   {% if paper.description is not none %}
-                  <p><font color="gray">{{paper.description}}</font></p>
+                  <p class="paper-note">{{paper.description}}</p>
                   {% endif %}
                   </div>
                 </td>
