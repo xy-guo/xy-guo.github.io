@@ -126,6 +126,20 @@ def get_papers():
         image="./images/ironmind.jpg",
     ))
     papers.append(Paper(
+        tag="anyworld",
+        title="AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization",
+        short_title="AnyWorld",
+        conference="Conference on Robot Learning",
+        conference_short="CoRL'26",
+        year=2026,
+        authors=gen_author_list("Cheng Chen, Jerry Bai, Jiacheng Wei, Boyu Chen, Xiaoji Zheng, Fan Wu, Minghao Yang, Tianrun Chen, Ruibo Li, Xiaoyu Yue, Xiaoyang Guo, Yixiao Ge, Guosheng Lin, Fayao Liu"),
+        url="https://arxiv.org/abs/2608.29242",
+        url_arxiv="https://arxiv.org/abs/2608.29242",
+        url_project_page="https://xpeng-robotics.github.io/anyworld/",
+        url_code="https://github.com/xpeng-robotics/AnyWorld",
+        image="./images/anyworld.png",
+    ))
+    papers.append(Paper(
         tag="xpace",
         title="XPACE: Joint World and Action Modeling from Heterogeneous Experience",
         short_title="XPACE",
@@ -168,8 +182,9 @@ def get_papers():
         tag="anchor3r",
         title="Anchor3R: Streaming 3D Reconstruction with Transient Anchors for Long-Horizon Visual Mapping",
         short_title="Anchor3R",
-        conference="Preprint",
-        conference_short="Arxiv'26",
+        conference="Conference on Robot Learning",
+        conference_short="CoRL'26",
+        special_honor="Spotlight",
         year=2026,
         authors=gen_author_list("Peilin Tao, Chong Cheng, Yuansen Du, Caiwei Song, Zhengqing Chen, Xiaoyang Guo, Wei Yin, Weiqiang Ren, Qian Zhang, Hainan Cui, Shuhan Shen"),
         url="https://arxiv.org/abs/2606.05035",
@@ -180,8 +195,8 @@ def get_papers():
         tag="horizonstream",
         title="HorizonStream: Long-Horizon Attention for Streaming 3D Reconstruction",
         short_title="HorizonStream",
-        conference="Preprint",
-        conference_short="Arxiv'26",
+        conference="Advances in Neural Information Processing Systems",
+        conference_short="NeurIPS'26",
         year=2026,
         authors=gen_author_list("Chong Cheng, Peilin Tao, Nanjie Yao, Guanzhi Ding, Xianda Chen, Yuansen Du, Xiaoyang Guo, Wei Yin, Weiqiang Ren, Qian Zhang, Zhengqing Chen, Hao Wang"),
         url="https://arxiv.org/abs/2605.23889",
@@ -525,10 +540,11 @@ def get_papers():
 
 def get_news():
     return [
+        dict(date="2026.10", text='Two papers at <strong>CoRL 2026</strong>: <a href="https://arxiv.org/abs/2606.05035">Anchor3R</a> (<strong>Spotlight</strong>) and <a href="https://arxiv.org/abs/2608.29242">AnyWorld</a>. <a href="https://arxiv.org/abs/2605.23889">HorizonStream</a> accepted to <strong>NeurIPS 2026</strong>.'),
         dict(date="2026.09", text='Released <a href="https://xpeng-robotics.github.io/xpace/">XPACE</a> and <a href="https://xpeng-robotics.github.io/ironmind/">IronMind</a>, two technical reports on embodied world models and humanoid manipulation.'),
-        dict(date="2026.06", text='One paper accepted to <strong>ICML 2026</strong> (EPS3D). SCOPE released on arXiv.'),
+        dict(date="2026.06", text='<a href="https://arxiv.org/abs/2606.08980">EPS3D</a> accepted to <strong>ICML 2026</strong>. SCOPE released on arXiv.'),
         dict(date="2026.04", text='Four papers accepted to <strong>CVPR 2026</strong>: Scal3R (<strong>Highlight</strong>), LongStream, LiteVGGT, and VGGT4D.'),
-        dict(date="2026.03", text='CompoSIA accepted to <strong>ECCV 2026</strong>. Started working on embodied foundation models.'),
+        dict(date="2026.03", text='<a href="https://yifever20002.github.io/CompoSIA/">CompoSIA</a> accepted to <strong>ECCV 2026</strong>. Started working on embodied foundation models.'),
         dict(date="2026.02", text='SAIL-Recon accepted as an <strong>Oral</strong> at <strong>3DV 2026</strong>.'),
         dict(date="2025.10", text='Three papers at <strong>ICCV 2025</strong> (Epona, DM-Calib, StableDepth <strong>Highlight</strong>); RAD at <strong>NeurIPS 2025</strong>; SynthDrive and ComDrive at <strong>IROS 2025</strong>.'),
     ]
