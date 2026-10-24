@@ -543,7 +543,7 @@ def get_news():
     return [
         dict(date="2026.10", text='Two papers at <strong>CoRL 2026</strong>: <a href="https://arxiv.org/abs/2606.05035">Anchor3R</a> (<strong>Spotlight</strong>) and <a href="https://arxiv.org/abs/2608.29242">AnyWorld</a>. <a href="https://arxiv.org/abs/2605.23889">HorizonStream</a> accepted to <strong>NeurIPS 2026</strong>.'),
         dict(date="2026.09", text='Released <a href="https://xpeng-robotics.github.io/xpace/">XPACE</a> and <a href="https://xpeng-robotics.github.io/ironmind/">IronMind</a>, two technical reports on embodied world models and humanoid manipulation.'),
-        dict(date="2026.06", text='<a href="https://arxiv.org/abs/2606.08980">EPS3D</a> accepted to <strong>ICML 2026</strong>. <a href="https://scope3d.github.io/">SCOPE</a> appears in <strong>SIGGRAPH 2026 Conference Papers</strong>.'),
+        dict(date="2026.06", text='<a href="https://arxiv.org/abs/2606.08980">EPS3D</a> accepted to <strong>ICML 2026</strong>. SCOPE released on arXiv.'),
         dict(date="2026.04", text='Four papers accepted to <strong>CVPR 2026</strong>: Scal3R (<strong>Highlight</strong>), LongStream, LiteVGGT, and VGGT4D.'),
         dict(date="2026.03", text='<a href="https://yifever20002.github.io/CompoSIA/">CompoSIA</a> accepted to <strong>ECCV 2026</strong>. Started working on embodied foundation models.'),
         dict(date="2026.02", text='SAIL-Recon accepted as an <strong>Oral</strong> at <strong>3DV 2026</strong>.'),
